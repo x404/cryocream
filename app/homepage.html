@@ -31,17 +31,21 @@
 <body>
 
 <div class="outerwrapper">
-    <header>А я тут вместо головы.</header>
-
-	<nav id="navbar">
+	<!-- =nav -->
+	<nav id="navbar" class="nav">
 		<ul>
-			<li><a href="#">меню1</a></li>
-			<li><a href="#">меню2</a></li>
-			<li><a href="#">меню3</a></li>
-			<li><a href="#">меню4</a></li>
-			<li><a href="#">меню5</a></li>
+			<li><a href="#" title="">Главная</a></li>
+			<li><a href="#" title="">Продукция</a></li>
+			<li><a href="#" title="">Услуги</a></li>
+			<li><a href="#" title="">О нас</a></li>
+			<li><a href="#" title="">Партнеры</a></li>
+			<li><a href="#" title="">Благотворительность</a></li>
+			<li><a href="#" title="">Фотогалерея</a></li>
+			<li><a href="#" title="">Контакты</a></li>
+			<li><a href="#" title="">Мероприятия</a></li>
 		</ul>
 	</nav>
+
 
 	<button type="button" class="navbar-toggle">
 		<span class="icon-bar"></span>
@@ -51,16 +55,250 @@
 	<button type="button" class="close-menu"><img src="template/images/close.png" alt=""></button>
 
 
-    <div class="main">
-		Пароль отправляется серверу в «открытом» виде — он шифруется известным алгоритмом на известном ключе. При использовании простого логина, пароль пользователя может быть перехвачен и дешифрирован.
-    </div>
+	<!-- =/nav -->
+
+
+	<!-- =header -->
+	<header>
+		<div class="logo">
+			<img src="images/logo.png" alt="CryoCream" />
+		</div>
+	</header>
+	<!-- =/header -->
+
+
+	<!-- =intro -->
+	<section class="intro text-right">
+		<div class="container">
+			Вкусные коктейли
+			приготовленные при помощи жидкого Азота прям на ваших глазах
+			будут превращаться в нежный сорбет
+			а сливки
+			в настоящее мороженное
+		</div>
+	</section>
+	<!-- =/intro -->
+
+
+	<!-- =carousel -->
+	<div class="container">
+		<div id="foo1" class="owll-carousel">
+			
+		</div>		
+	</div>
+	<!-- =/carousel -->
+
+
+	<!-- =main -->
+	<div class="main">
+		<div class="container">
+			<section class="text">
+				<header class="title text-center">О КОМПАНИИ</header>
+				<p>CryoCream – это команда профессионалов, которая предлагает свои услуги на рынке с 2006 года. С тех пор у коллектива накопился солидный опыт, позволяющий обслуживать клиентов на высоком уровне. Основа нашего сервиса - «Криогеника» и сопутствующие услуги. Здесь каждого желающего порадует богатый ассортимент блюд, а также соответствующий перечень услуг.</p>
+				
+				<p>В рамках наших мощностей реально проводить ежедневно до 3-4 мероприятий, при этом мы можем достойно обслужить от 10 и до 300 человек. В нашем послужном списке более 800 успешно организованных мероприятий. Мы уже обслужили более 500 000 гостей. У нашей компании есть собственная довольно большая база инвентаря и различного оборудования, так что у нас всё под рукой и всё своё, не нужно за чем-либо обращаться в другие компании.</p>
+			</section>
+
+
+			<!-- =product -->
+			<section class="product">
+				<header class="title text-center">НАШ ПРОДУКТ</header>
+				<div id="foo2" class="product owl-carousel">
+				
+				</div>
+			</section>
+
+			<!-- =/product -->
+
+			<!-- =text -->
+			<div class="text">
+				<p>Замороженный сладкий продукт из молока, сливок, масла, сахара, соков, ягод и прочих продуктов с добавлением вкусовых и ароматических веществ. Существуют различные сорта мороженого, например крем-брюле или пломбир.</p>
+				<p>До появления современных способов замораживания мороженое было роскошным лакомством только для особых случаев. Производство мороженого было довольно сложным.</p>
+				<p>В домашних условиях мороженое можно получить при помощи специального аппарата — мороженицы. Для промышленных объёмов производства используются автоматические фризеры (от 1 до 15 кг в час). Возможности производства бо́льших объёмов доступны на хладокомбинатах.</p>
+			</div>
+			<!-- =/text -->
+
+			<!-- =catalog -->
+			<section class="catalog">
+				<header class="title text-center">НАША ПРОДУКЦИЯ</header>
+				<div class="flexbox text-center">
+					<div class="catalog__item">
+						<img src="tmp/vanilla.png" alt="Vanilla" />
+						<p class="catalog__item-title">Vanilla</p>
+					</div>
+					<div class="catalog__item">
+						<img src="tmp/caramel.png" alt="Salted Caramel" />
+						<p class="catalog__item-title">Salted Caramel</p>
+					</div>
+					<div class="catalog__item">
+						<img src="tmp/magic.png" alt="Black Magic" />
+						<p class="catalog__item-title">Black Magic</p>
+					</div>
+					<div class="catalog__item">
+						<img src="tmp/cinnnamon.png" alt="Sweet Cinnamon" />
+						<p class="catalog__item-title">Sweet Cinnamon</p>
+					</div>
+					<div class="catalog__item">
+						<img src="tmp/truffle.png" alt="chocolate  truffle" />
+						<p class="catalog__item-title">chocolate  truffle</p>
+					</div>
+				</div>
+			</section>
+			<!-- =/catalog -->
+
+
+			<!-- =text -->
+			<section class="text">
+				<p>Мы находим к каждому клиенту индивидуальный подход, а также обеспечиваем оперативность (отвечаем на заявку в течение 1 часа). При этом CryoCream предоставляет своим клиентам очевидные преимущества: это не агентство, здесь нет дополнительных наценок и комиссий, зато имеется собственная материальная база (транспорт, мебель, аксессуары и оборудование). Качество всего проверяется самым тщательным образом.</p>
+			</section>
+			<!-- =/text -->
+
+
+			<!-- =homegallery -->
+			<section class="home__gallery">
+				<h1>ФОТОГАЛЛЕРЕЯ</h1>
+				<div class="flexbox">
+					<div class="home__gallery-item"></div>
+					<div class="home__gallery-item"></div>
+					<div class="home__gallery-item"></div>
+					<div class="home__gallery-item"></div>
+					<div class="home__gallery-item"></div>
+				</div>
+			</section>
+			<!-- =/homegallery -->
+	
+
+			<!-- =text -->
+			<div class="text">
+				<div class="container">
+					<p>Наши ресурсы позволяют обеспечить оказание довольно широкого ассортимента услуг, от  аренды посуды, сладкой анимации  до организации свадеб, копроративов, детских праздников,  обеспечения услуг повара и официантов на выезд. При этом всё собрано строго в одном месте, вам не нужно будет ещё что-то искать на стороне, дополнительно заказывать. Мы – это слаженная команда из высококлассных профессионалов, которая вместе на рынке уже более 9 лет!</p>				
+				</div>
+			</div>
+			<!-- =/text -->
+			
+			<!-- =partners -->
+			<section class="partners">
+				<header class="title text-center">НАШИ ПАРТНЕРЫ</header>
+				<div class="flexbox">
+					<div class="partners__item"></div>
+					<div class="partners__item"></div>
+					<div class="partners__item"></div>
+					<div class="partners__item"></div>
+					<div class="partners__item"></div>
+				</div>
+			</section>
+			<!-- =/partners -->
+
+			<!-- =text -->
+			<div class="text">
+				<p>Процесс фризерования является, собственно, процессом превращения жидкой смеси в мороженое. Этого добиваются с помощью фризеров непрерывного действия, в которых смесь взбивается с воздухом и замороживается до температуры −4°С.</p>
+				<p>Непосредственно после фризерования мороженое фасуют и закаливают (подвергают шоковой заморозке в потоке воздуха при температуре от −25 до −37 °С). Закаленное мороженое упаковывают в индивидуальную или групповую упаковку. Упакованное мороженое помещают на склады длительного хранения, откуда в дальнейшем осуществляется отгрузка в торговую сеть.</p>
+			</div>
+			<!-- =/text -->
+		</div>
+	</div>
+	<!-- =/main -->
+
+	<!-- =map -->
+	<section class="map">
+		<header class="title text-center">ГДЕ МЫ НАХОДИМСЯ</header>
+		<div id="map"></div>
+	</section>
+	<!-- =/map -->
+
+
+	<!-- =feedback -->
+	<div class="feedback">
+		<div class="feedback__content text-center">
+			<p class="title">МЫ ВСЕГДА НА СВЯЗИ</p>
+			<div class="vcard">
+				<div class="name"><span class="category">Магазин</span> <span class="fn org">Cryocream</span></div>
+				<div class="adr">
+					 <span class="postal-code">191002</span>, <span class="country">Россия</span><span class="locality">Санкт-Петербург</span>, <span class="street-address">ул.Ломоносова, д.9</span>
+				</div>
+				<div><a href="tel:+74957840948" class="tel">+7 (495) 837-11-67</a> | <a href="mailto:info@cryocream.ru" class="email" title="">info@cryocream.ru</a></div>
+			</div>
+			<p>Напишите Ваше сообщение, пожелание или что-нибудь доброе с нашей компании ))) Мы обязательно ответим как можно скорее</p>
+		</div>
+		<form action="#" method="post" id="feedback-form" class="feedback__form">
+			<fieldset>
+				<div class="row">
+					<input name="name" type="text" value="" class="form-control required" placeholder="как вас зовут">
+					<input name="tel" type="tel" value="" class="form-control required" placeholder="ваш номер телефона *">
+					<input name="email" type="email" value="" class="form-control required email" placeholder="ваш e-mail *">
+				</div>
+				<div class="row">
+					<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Текст вашего обновления *" class="required"></textarea>
+					<button type="button" class="submit">Отправить</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<!-- =/feedback -->
 </div>
 
+
+
+
+<!-- =footer -->
 <footer>
-	<div class="wrapper">
-		А тут у меня — ноги приделаны.
+	<div class="container">
+		<div class="footer__menu">
+			<ul>
+				<li><a href="#" title="">Главная</a></li>
+				<li><a href="#" title="">Продукция</a></li>
+				<li><a href="#" title="">Услуги</a></li>
+				<li><a href="#" title="">О нас</a></li>
+				<li><a href="#" title="">Партнеры</a></li>
+				<li><a href="#" title="">Благотворительность</a></li>
+				<li><a href="#" title="">Фотогалерея</a></li>
+				<li><a href="#" title="">Контакты</a></li>
+				<li><a href="#" title="">Мероприятия</a></li>
+			</ul>
+		</div>
+
+		<div class="footer__content">
+			<div class="flexbox">
+				<div class="footer__item">
+					<p class="title">АДРЕС</p>
+					<p>191002 Россия, Санкт-Петербург, ул. Ломоносова, д.9</p>
+				</div>
+				<div class="footer__item">
+					<p class="title">КОНТАКТЫ</p>
+					<p>+7 (495) 837-11-67</p>
+					<p><a href="mailto:info@cryocream.ru">info@cryocream.ru</a></p>
+				</div>
+				<div class="footer__item">
+					<img src="images/logo-small.gif" alt="Cryocream" />
+					<p class="footer__logo-title">CRYOCREAM</p>
+					<p>любовь к криокультуре</p>
+				</div>
+				<div class="footer__item">
+					<div class="footer__social-icons">
+						<a href="#" title="" target="_blank"><img src="template/images/social/fb.gif" width="35" height="35" alt="Facebook"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/vk.gif" width="35" height="35" alt="Вконтакте"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/twitter.gif" width="35" height="35" alt="Twitter"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/odn.gif" width="35" height="35" alt="Одноклассники"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/inst.gif" width="35" height="35" alt="Instagram"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/googleplus.gif" width="35" height="35" alt="Google Plus"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/play.gif" width="35" height="35" alt=""></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/smile.gif" width="35" height="35" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer__bottom flexbox">
+			<div class="footer__copyright">
+				© 2017 CryoCream - <a href="/" title="">Криомороженное</a>
+			</div>
+			<div class="footer__kreotif text-right">
+				<p>Digital Agency Kreotif - <a href="http://kreotif.com" title="" target="_blank">Создание сайтов</a></p>				
+			</div>
+		</div>
 	</div>
 </footer>
+<!-- =/footer -->
 
 
 <div id="outdated"></div>

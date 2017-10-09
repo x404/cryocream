@@ -1,0 +1,123 @@
+.catalog{
+	.flexbox{
+		justify-content: space-between;
+	}
+
+	&__item{
+		position: relative;
+		$s: 200px;
+		&:before{
+			@extend .before;
+			height: $s;
+			width: $s;
+			background: url(../images/mask.png) no-repeat left top;
+			z-index: 1;
+		}
+		&-title{
+			@extend .bold;
+			@include font-size(1.8);
+			color: $color2;
+			height: $s;
+			width: $s;
+			left: 0;
+			line-height: 1.5;
+			padding-left: 40px;
+			padding-right: 40px;
+			position: absolute;
+			text-transform: uppercase;
+			top: 0;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+.feedback{
+	background-color: rgba(255, 255, 255, .8);
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+	z-index: 999;
+	@include font-size(1.5);
+	.vcard{
+		.name{
+			display: none;
+		}
+		.adr{
+			margin-bottom: .5rem;
+		}
+		.tel{
+			text-decoration: none;
+			margin-right: .5rem;
+		}
+		.email{
+			margin-left: .5rem;
+			@extend .tdn;
+			color: $color4;
+		}
+	}
+
+	&__content{
+		padding: 1rem 0 .8rem;
+	}
+	&__form{
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 1rem;
+		position: relative;
+		width: 765px;
+		margin-left: auto;
+		margin-right: auto;
+		.row{
+			@include flexbox;
+			@include justify-content(space-between);
+			margin-bottom: 1rem;
+			input.form-control,
+			textarea{
+				// background-color: $color9;
+				border: 1px solid $color5;
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+
+
+			input.form-control{
+				// @extend .italic;
+				height: 3rem;
+				width: 245px;
+				@include font-size(1.4);
+				@include placeholder($color1);
+			}
+
+			textarea{
+				// @extend .italic;
+				flex: 1;
+				overflow: hidden;
+				height: 7rem;
+				@include placeholder($color1);
+			}
+
+			.error{
+				border: 1px solid red !important
+			}
+
+			.submit{
+				@include transition-param();
+				// @extend .italic;
+				border: none;
+				color: $color2;
+				cursor: pointer;
+				margin-left: 1.8rem;
+				text-decoration: none;
+				text-transform: lowercase;
+				width: 12rem;
+				// background-color: $color10;
+				&:hover{
+					opacity: .9
+				}
+			}
+		}
+	}
+}
