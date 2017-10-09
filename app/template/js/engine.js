@@ -9,12 +9,6 @@ $(document).ready(function(){
 		startPosition : 2,
 		stagePadding : 250,
 		navText: ["", ""],
-		onInitialized: function (event) {
-			refreshFirstLastVisible(event);
-		},
-		onChanged: function (event) {
-			refreshFirstLastVisible(event);
-		},
 		responsive:{
 			0:{
 				items:1,
@@ -36,6 +30,33 @@ $(document).ready(function(){
 		}
 	});
 
+
+	$('#foo2').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:3,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 20
+			},
+			900:{
+				items:2,
+				stagePadding: 0
+			},
+			992:{
+				items:1
+			},
+			1250:{
+				items:2
+			},
+			1550:{
+				items:3
+			}
+		}
+	});
 
 	// mobile-menu
 	$('#navbar').each(function(){

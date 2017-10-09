@@ -155,10 +155,17 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .title, .catalog__item-title {
+@font-face {
+  font-family: "SegoeUIItalic";
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+.bold, .title, .catalog__item-title, .product__title {
   font-family: "SegoeUIBold"; }
 
-.italic {
+.italic, .product__more-link {
   font-family: "SegoeUIItalic"; }
 
 .title {
@@ -178,7 +185,11 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .catalog__item:before, .home__gallery-item a:after {
+.block-center, .product__item {
+  margin-left: auto;
+  margin-right: auto; }
+
+.before, .catalog__item:before, .home__gallery-item a:after, .product__item:after {
   content: "";
   display: block;
   position: absolute; }
@@ -313,6 +324,60 @@ footer {
   .home__gallery-item a:hover:after {
     transform: scale(1);
     opacity: 1; }
+
+.product__item {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  width: 298px; }
+  .product__item hr {
+    background: #fff;
+    border: none;
+    display: block;
+    height: 3px;
+    margin: 2rem auto;
+    width: 85px; }
+  .product__item:after {
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+    background: rgba(0, 122, 187, 0.55);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+  .product__item:hover:after {
+    opacity: 1; }
+
+.product__pic img {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.product__textbox {
+  left: 4px;
+  position: absolute;
+  top: 0;
+  width: 290px;
+  z-index: 2;
+  height: 100%; }
+  .product__textbox .flexbox {
+    height: 100%; }
+  .product__textbox .flexbox {
+    flex-flow: column;
+    justify-content: center; }
+
+.product__title {
+  font-size: 20px;
+  font-size: 2rem;
+  text-transform: uppercase; }
+
+.product__more {
+  margin-top: 2rem; }
+  .product__more-link {
+    color: #fff;
+    text-decoration: none; }
 
 .partners .flexbox {
   margin-top: 2rem;

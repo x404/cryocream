@@ -71,6 +71,83 @@
 	}
 }
 
+.product{
+	$w : 298px;
+	&__item{
+		@extend .block-center;
+		color: $color2;
+		position: relative;
+		text-align: center;
+		width: $w;
+
+		hr{
+			background: $color2;
+			border:none;
+			display: block;
+			height: 3px;
+			margin: 2rem auto;
+			width: 85px;
+		}
+
+		&:after{
+			@extend .before;
+			@include transition-param;
+			background:  rgba(0, 122, 187, .55);
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		&:hover{
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+
+	&__pic{
+		img{
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	&__textbox{
+		$wtb: 290px;
+		left: ($w - $wtb)/2;
+		position: absolute;
+		top: 0;
+		width: $wtb;
+		z-index: 2;
+		.flexbox{
+			height: 100%;			
+		}
+		height: 100%;
+		.flexbox{
+			flex-flow: column;
+			justify-content: center;
+		}
+	}
+
+	&__title{
+		@include font-size(2);
+		@extend .bold;
+		text-transform: uppercase;
+	}
+
+	&__more{
+		margin-top: 2rem;
+		&-link{
+			color: $color2;
+			text-decoration: none;
+			@extend .italic;
+		}
+	}
+}
 
 .partners{
 	.flexbox{

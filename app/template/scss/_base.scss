@@ -109,6 +109,15 @@ input::-moz-focus-inner{
 	font-weight: normal;
 }
 
+@font-face {
+	font-family: "SegoeUIItalic";
+	src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+	src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"),
+	url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
 
 .bold{
 	font-family: "SegoeUIBold";
@@ -141,6 +150,11 @@ input::-moz-focus-inner{
 	}
 }
 
+
+.block-center{
+	margin-left: auto;
+	margin-right: auto;
+}
 
 @mixin sprite($x:0, $y:0){
 	background-image: url(../images/sprite.png);
