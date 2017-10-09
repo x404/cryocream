@@ -72,6 +72,54 @@
 }
 
 .product{
+
+	&__carousel{
+		.owl{
+			&-dots{
+				@include justify-content(center);
+				bottom: 2.8rem;
+				display: flex;
+				position: absolute;
+				width: 100%;
+				.owl-dot{
+					border: 3px solid $color2;
+					height: 15px;
+					margin: 0 8px;
+					width: 15px;
+					@include rounded(50%);
+					&.active{
+						background: $color2;
+					}
+				}
+			}
+			&-nav{
+				left: 50%;
+				margin-left: -49%;
+				position: absolute;
+				top: 110px;
+				width: 98%;
+				.owl-{
+					&prev,
+					&next{
+						background: url(../images/prevnext.png) no-repeat left top;
+						height: 43px;
+						position: absolute;
+						width: 28px;
+						&.disabled{
+							opacity: .6;
+						}
+					}
+
+					&next{
+						right: 0;
+						@include rotation(180deg);
+					}
+				}
+			}
+		}
+	}
+
+
 	$w : 298px;
 	&__item{
 		@extend .block-center;
