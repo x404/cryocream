@@ -34,6 +34,52 @@
 	}
 }
 
+
+.home{
+	&__gallery{
+		.flexbox{
+			justify-content: space-between;
+		}
+		&-item{
+			a{
+				display: block;
+				position: relative;
+				img{
+					vertical-align: top;
+				}
+				&:after{
+					@extend .before;
+					background:url(../images/zoom.png) no-repeat center center rgba(0, 122, 187, .55);
+					height: 100%;
+					left: 0;
+					top: 0;
+					width: 100%;
+					opacity: 0;
+					transform: scale(.7);
+					@include transition;
+				}
+
+				&:hover{
+					&:after{
+						transform: scale(1);
+						opacity: 1;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+.partners{
+	.flexbox{
+		margin-top: 2rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
 .feedback{
 	background-color: rgba(255, 255, 255, .8);
 	margin-left: auto;
