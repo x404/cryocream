@@ -86,14 +86,15 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  font-display: swap;
-  height: 100vh;
-  font-family: "SegoeUIRegular", Arial;
   font-size: 14px;
   font-size: 1.4rem;
   -webkit-border-radius: 2px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  background: url(/tmp/bg.jpg) no-repeat center top/cover;
+  flex-flow: column;
+  font-display: swap;
+  font-family: "SegoeUIRegular", Arial;
+  height: 100vh; }
 
 html, body {
   height: 100%; }
@@ -173,7 +174,7 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.cg, .footer__menu, .footer__bottom {
+.cg, .nav, .footer__menu, .footer__bottom {
   font-family: 'CenturyGothic'; }
 
 .cgb {
@@ -227,7 +228,7 @@ input::-moz-focus-inner {
   margin: 1rem 1.8rem 0;
   padding: 1.2rem 0;
   background: rgba(0, 0, 0, 0.75);
-  bottom: 6px solid rgba(255, 255, 255, 0.31); }
+  border: 6px solid rgba(255, 255, 255, 0.31); }
   .nav ul {
     display: flex;
     justify-content: center; }
@@ -352,6 +353,9 @@ footer {
 
 .text-center {
   text-align: center; }
+
+label.error {
+  display: none !important; }
 
 .catalog .flexbox {
   justify-content: space-between; }

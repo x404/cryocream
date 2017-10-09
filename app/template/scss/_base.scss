@@ -37,12 +37,13 @@ html {
 
 body{
 	@include flexbox;
-	flex-flow: column;
-	font-display: swap;
-	height: 100vh;
-	font-family: "SegoeUIRegular", Arial;
 	@include font-size(1.4);
 	@include rounded;
+	background: url(/tmp/bg.jpg) no-repeat center top /cover;
+	flex-flow: column;
+	font-display: swap;
+	font-family: "SegoeUIRegular", Arial;
+	height: 100vh;
 }
 
 html, body{
@@ -207,15 +208,21 @@ input::-moz-focus-inner{
 }
 
 
+header{
+	.logo{
+
+	}
+}
 
 
 /* =navigation
 ---------------------------*/
 .nav{
+	@extend .cg;
 	margin: 1rem 1.8rem 0;
 	padding: 1.2rem 0;
 	background: rgba(0, 0, 0, .75);
-	bottom: 6px solid rgba(255, 255, 255, .31);
+	border: 6px solid rgba(255, 255, 255, .31);
 	ul{
 		display: flex;
 		justify-content: center;
@@ -235,6 +242,8 @@ input::-moz-focus-inner{
 }
 /* =/navigation
 ---------------------------*/
+
+
 
 
 .owl-carousel{
@@ -399,3 +408,8 @@ footer{
 	text-align: center;
 }
 
+
+
+label.error{
+	display: none !important;
+}
