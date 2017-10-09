@@ -211,13 +211,14 @@
 	margin-right: auto;
 	width: 900px;
 	z-index: 999;
-	@include font-size(1.5);
 	.vcard{
+		@include font-size(1.5);
+		margin-bottom: 1rem;
 		.name{
 			display: none;
 		}
 		.adr{
-			margin-bottom: .5rem;
+			margin-bottom: 1.2rem;
 		}
 		.tel{
 			text-decoration: none;
@@ -226,7 +227,7 @@
 		.email{
 			margin-left: .5rem;
 			@extend .tdn;
-			color: $color4;
+			color: $color7;
 		}
 	}
 
@@ -234,13 +235,11 @@
 		padding: 1rem 0 .8rem;
 	}
 	&__form{
-		padding-left: 1rem;
-		padding-right: 1rem;
-		padding-top: 1rem;
-		position: relative;
-		width: 765px;
 		margin-left: auto;
 		margin-right: auto;
+		padding: 0 1rem;
+		position: relative;
+		width: 765px;
 		.row{
 			@include flexbox;
 			@include justify-content(space-between);
@@ -255,7 +254,7 @@
 
 
 			input.form-control{
-				// @extend .italic;
+				@extend .italic;
 				height: 3rem;
 				width: 245px;
 				@include font-size(1.4);
@@ -263,7 +262,7 @@
 			}
 
 			textarea{
-				// @extend .italic;
+				@extend .italic;
 				flex: 1;
 				overflow: hidden;
 				height: 7rem;
@@ -273,22 +272,93 @@
 			.error{
 				border: 1px solid red !important
 			}
+		}
 
-			.submit{
-				@include transition-param();
-				// @extend .italic;
-				border: none;
-				color: $color2;
-				cursor: pointer;
-				margin-left: 1.8rem;
-				text-decoration: none;
-				text-transform: lowercase;
-				width: 12rem;
-				// background-color: $color10;
-				&:hover{
-					opacity: .9
-				}
+		.policy{
+			margin-top: 1.5rem;
+		}
+
+		.submit{
+			@include font-size(1.5);
+			@include transition-param();
+			@extend .block-center;
+			background-color: $color7;
+			border: none;
+			border-radius: 3px;
+			color: $color2;
+			cursor: pointer;
+			padding: 1rem 4rem;
+			text-decoration: none;
+			margin-top: 2rem;
+			text-transform: uppercase;
+			@extend .bold;
+			&:hover{
+				opacity: .9
 			}
 		}
 	}
+}
+
+
+
+.policy{
+	@extend .italic;
+	color: $color8;
+	a{
+		color: $color7;
+		text-decoration: none;
+	}
+}
+
+
+.user-access + label {
+  cursor: pointer;
+}
+
+.user-access:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.user-access:not(checked) + label {
+  display: block;
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 40px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color8;
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.user-access:checked + label:before {
+	border-color: $color7;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+	content: '*';
+	position: absolute;
+	top: -3px;
+	left: 7px;
+	width: 22px;
+	height: 22px;
+	font-size: 30px;
+}
+
+input.submit:disabled{
+	background: rgba(128, 128, 128, .3) !important;
+	cursor: default;
+	&:hover{
+		opacity: 1 !important;
+	}
+}
+
+.form-control,
+textarea{
+	@include transition-param(background);
 }

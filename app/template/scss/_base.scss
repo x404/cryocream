@@ -8,11 +8,11 @@ $color3:#f5f5f5;
 $color4:#d5d5d5;
 $color5:#ccc;
 $color6:#007abb;
+$color7:#0563bf;
+$color8:#808080;
+$color9:#333;
 
 
-
-$color7:#80bbde;
-$color8:#292929;
 
 
 * {
@@ -75,7 +75,7 @@ input::-moz-focus-inner{
 
 /*** standart classes *****/
 p{margin: .5rem 0; line-height: 1.2}
-a{color:#020000}
+a{color:$color6}
 h1{font-size:2.5rem}
 h2{font-size:2.4rem}
 h3{font-size:1.6rem}
@@ -87,6 +87,26 @@ input::-moz-focus-inner{
 	border: 0;
 	padding: 0;
 }
+
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('../fonts/CenturyGothic.eot');
+    src: url('../fonts/CenturyGothic.eot') format('embedded-opentype'),
+         url('../fonts/CenturyGothic.woff2') format('woff2'),
+         url('../fonts/CenturyGothic.woff') format('woff'),
+         url('../fonts/CenturyGothic.ttf') format('truetype')
+}
+
+
+@font-face {
+    font-family: 'CenturyGothicBold';
+    src: url('../fonts/CenturyGothicBold.eot');
+    src: url('../fonts/CenturyGothicBold.eot') format('embedded-opentype'),
+         url('../fonts/CenturyGothicBold.woff2') format('woff2'),
+         url('../fonts/CenturyGothicBold.woff') format('woff'),
+         url('../fonts/CenturyGothicBold.ttf') format('truetype')
+}
+
 
 /* font-family: "SegoeUIRegular"; */
 @font-face {
@@ -118,6 +138,10 @@ input::-moz-focus-inner{
 	font-style: normal;
 	font-weight: normal;
 }
+
+
+.cg{font-family: 'CenturyGothic';}
+.cgb{font-family: 'CenturyGothicBold';}
 
 .bold{
 	font-family: "SegoeUIBold";
@@ -152,6 +176,7 @@ input::-moz-focus-inner{
 
 
 .block-center{
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -258,33 +283,119 @@ input::-moz-focus-inner{
 footer{
 	background: $color3;
 	margin-top: 2.5rem;
+	.title{
+		@include font-size(1.8);
+		font-family: "SegoeUIRegular", Arial;
+	}	
 }
 
 .footer{
+	$w: 980px;
 	&__menu{
 		border-top: 1px solid $color4;
 		margin: 3rem 0;
 		padding-top: 1.5rem;
+		@extend .cg;
 		ul{
 			display: flex;
+			justify-content: space-between;
+			margin: auto;
+			width: $w;
 			li{
-				margin: 0 3.5rem;
 				a{
 					color: $color1;
 					text-decoration: none;
+					@include transition();
+					&:hover{
+						color: $color6;
+						border-bottom: 1px dashed $color6;
+					}
+				}
+				&.active{
+					span{
+						color: $color6;
+						border-bottom: 1px dashed $color6;						
+					}
 				}
 			}
 		}
 	}
 
-	&__bottom{
-		border-top: 1px solid $color4;
-		padding: 1.6rem 0;
-		justify-content: space-between;
+	&__content{
+		margin: auto;
+		width: $w;
+		.flexbox{
+			justify-content: space-between;
+		}		
 	}
+
+	&__item{
+		color: $color9;
+		padding-right: 5rem;
+		&:last-child{
+			width: 210px;
+		}
+		&-cryocream{
+			text-align: center;
+			p:not(.footer__logo-title){
+				@include font-size(1.5);
+				color: $color8;
+			}
+		}
+
+		.email{
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__logo{
+		&-title{
+			@extend .bold;
+			@include font-size(1.8);
+			color: $color1;
+			letter-spacing: .6rem;
+		}
+	}
+
+
+	&__bottom{
+		@extend .cg;
+		border-top: 1px solid $color4;
+		justify-content: space-between;
+		padding: 1.6rem 0;
+		margin-top: 1.5rem;
+		a{
+			color: $color1;
+			text-decoration: none;
+			border-bottom: 1px dashed $color1;
+			&:hover{
+				border-bottom: none;
+			}
+		}
+	}
+
+	&__social{
+		color: $color3;
+		font-style: normal;
+		font-weight: bold;
+		padding-top: 1rem;
+		&-icons{
+			padding-top: 1rem;
+			a{
+				opacity: 1;
+				@include transition-param;
+				&:hover{
+					opacity: .8;
+				}
+			}
+		}
+	}	
 }
 
 
 .text-center{
 	text-align: center;
 }
+

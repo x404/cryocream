@@ -302,7 +302,7 @@
 			</div>
 			<p>Напишите Ваше сообщение, пожелание или что-нибудь доброе с нашей компании ))) Мы обязательно ответим как можно скорее</p>
 		</div>
-		<form action="#" method="post" id="feedback-form" class="feedback__form">
+		<form action="#" method="post" id="feedback-form" class="feedback__form form-policy">
 			<fieldset>
 				<div class="row">
 					<input name="name" type="text" value="" class="form-control required" placeholder="как вас зовут">
@@ -311,8 +311,12 @@
 				</div>
 				<div class="row">
 					<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Текст вашего обновления *" class="required"></textarea>
-					<button type="button" class="submit">Отправить</button>
 				</div>
+				<div class="qorder__form-row policy">
+					<input type="checkbox" id="checkbox2" value="" name="checkbox" checked="checked" class="user-access">
+					<label for="checkbox2">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+				</div>				
+				<button type="button" class="submit">Отправить</button>
 			</fieldset>
 		</form>
 	</div>
@@ -328,13 +332,13 @@
 		<div class="footer__menu">
 			<ul>
 				<li><a href="#" title="">Главная</a></li>
-				<li><a href="#" title="">Продукция</a></li>
+				<li class="active"><span>Продукция</span></li>
 				<li><a href="#" title="">Услуги</a></li>
 				<li><a href="#" title="">О нас</a></li>
 				<li><a href="#" title="">Партнеры</a></li>
 				<li><a href="#" title="">Благотворительность</a></li>
 				<li><a href="#" title="">Фотогалерея</a></li>
-				<li><a href="#" title="">Контакты</a></li>
+				<!-- <li><a href="#" title="">Контакты</a></li> -->
 				<li><a href="#" title="">Мероприятия</a></li>
 			</ul>
 		</div>
@@ -343,14 +347,15 @@
 			<div class="flexbox">
 				<div class="footer__item">
 					<p class="title">АДРЕС</p>
-					<p>191002 Россия, Санкт-Петербург, ул. Ломоносова, д.9</p>
+					<p>191002 Россия, Санкт-Петербург,</p>
+					<p>ул. Ломоносова, д.9</p>
 				</div>
 				<div class="footer__item">
 					<p class="title">КОНТАКТЫ</p>
 					<p>+7 (495) 837-11-67</p>
-					<p><a href="mailto:info@cryocream.ru">info@cryocream.ru</a></p>
+					<p><a href="mailto:info@cryocream.ru" title="" class="email">info@cryocream.ru</a></p>
 				</div>
-				<div class="footer__item">
+				<div class="footer__item footer__item-cryocream">
 					<img src="template/images/logo-small.gif" alt="Cryocream" />
 					<p class="footer__logo-title">CRYOCREAM</p>
 					<p>любовь к криокультуре</p>

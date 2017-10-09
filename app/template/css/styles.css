@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   margin-right: auto;
   margin-left: auto; }
@@ -121,7 +122,7 @@ p {
   line-height: 1.2; }
 
 a {
-  color: #020000; }
+  color: #007abb; }
 
 h1 {
   font-size: 2.5rem; }
@@ -138,6 +139,16 @@ h3 {
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url("../fonts/CenturyGothic.eot");
+  src: url("../fonts/CenturyGothic.eot") format("embedded-opentype"), url("../fonts/CenturyGothic.woff2") format("woff2"), url("../fonts/CenturyGothic.woff") format("woff"), url("../fonts/CenturyGothic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: url("../fonts/CenturyGothicBold.eot");
+  src: url("../fonts/CenturyGothicBold.eot") format("embedded-opentype"), url("../fonts/CenturyGothicBold.woff2") format("woff2"), url("../fonts/CenturyGothicBold.woff") format("woff"), url("../fonts/CenturyGothicBold.ttf") format("truetype"); }
 
 /* font-family: "SegoeUIRegular"; */
 @font-face {
@@ -162,10 +173,16 @@ input::-moz-focus-inner {
   font-style: normal;
   font-weight: normal; }
 
-.bold, .title, .catalog__item-title, .product__title {
+.cg, .footer__menu, .footer__bottom {
+  font-family: 'CenturyGothic'; }
+
+.cgb {
+  font-family: 'CenturyGothicBold'; }
+
+.bold, .title, .footer__logo-title, .catalog__item-title, .product__title, .feedback__form .submit {
   font-family: "SegoeUIBold"; }
 
-.italic, .product__more-link {
+.italic, .product__more-link, .feedback__form .row input.form-control, .feedback__form .row textarea, .policy {
   font-family: "SegoeUIItalic"; }
 
 .title {
@@ -185,7 +202,8 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.block-center, .product__item {
+.block-center, .product__item, .feedback__form .submit {
+  display: block;
   margin-left: auto;
   margin-right: auto; }
 
@@ -254,23 +272,83 @@ input::-moz-focus-inner {
 footer {
   background: #f5f5f5;
   margin-top: 2.5rem; }
+  footer .title {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: "SegoeUIRegular", Arial; }
 
 .footer__menu {
   border-top: 1px solid #d5d5d5;
   margin: 3rem 0;
   padding-top: 1.5rem; }
   .footer__menu ul {
-    display: flex; }
-    .footer__menu ul li {
-      margin: 0 3.5rem; }
-      .footer__menu ul li a {
-        color: #000;
-        text-decoration: none; }
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 980px; }
+    .footer__menu ul li a {
+      color: #000;
+      text-decoration: none;
+      -webkit-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out; }
+      .footer__menu ul li a:hover {
+        color: #007abb;
+        border-bottom: 1px dashed #007abb; }
+    .footer__menu ul li.active span {
+      color: #007abb;
+      border-bottom: 1px dashed #007abb; }
+
+.footer__content {
+  margin: auto;
+  width: 980px; }
+  .footer__content .flexbox {
+    justify-content: space-between; }
+
+.footer__item {
+  color: #333;
+  padding-right: 5rem; }
+  .footer__item:last-child {
+    width: 210px; }
+  .footer__item-cryocream {
+    text-align: center; }
+    .footer__item-cryocream p:not(.footer__logo-title) {
+      font-size: 15px;
+      font-size: 1.5rem;
+      color: #808080; }
+  .footer__item .email:hover {
+    text-decoration: none; }
+
+.footer__logo-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #000;
+  letter-spacing: .6rem; }
 
 .footer__bottom {
   border-top: 1px solid #d5d5d5;
+  justify-content: space-between;
   padding: 1.6rem 0;
-  justify-content: space-between; }
+  margin-top: 1.5rem; }
+  .footer__bottom a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px dashed #000; }
+    .footer__bottom a:hover {
+      border-bottom: none; }
+
+.footer__social {
+  color: #f5f5f5;
+  font-style: normal;
+  font-weight: bold;
+  padding-top: 1rem; }
+  .footer__social-icons {
+    padding-top: 1rem; }
+    .footer__social-icons a {
+      opacity: 1;
+      -webkit-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out; }
+      .footer__social-icons a:hover {
+        opacity: .8; }
 
 .text-center {
   text-align: center; }
@@ -428,29 +506,29 @@ footer {
   margin-left: auto;
   margin-right: auto;
   width: 900px;
-  z-index: 999;
-  font-size: 15px;
-  font-size: 1.5rem; }
-  .feedback .vcard .name {
-    display: none; }
-  .feedback .vcard .adr {
-    margin-bottom: .5rem; }
-  .feedback .vcard .tel {
-    text-decoration: none;
-    margin-right: .5rem; }
-  .feedback .vcard .email {
-    margin-left: .5rem;
-    color: #d5d5d5; }
+  z-index: 999; }
+  .feedback .vcard {
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+    .feedback .vcard .name {
+      display: none; }
+    .feedback .vcard .adr {
+      margin-bottom: 1.2rem; }
+    .feedback .vcard .tel {
+      text-decoration: none;
+      margin-right: .5rem; }
+    .feedback .vcard .email {
+      margin-left: .5rem;
+      color: #0563bf; }
   .feedback__content {
     padding: 1rem 0 .8rem; }
   .feedback__form {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    position: relative;
-    width: 765px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding: 0 1rem;
+    position: relative;
+    width: 765px; }
     .feedback__form .row {
       display: -webkit-box;
       display: -webkit-flex;
@@ -503,18 +581,79 @@ footer {
           transition: line-height 0.5s ease; }
       .feedback__form .row .error {
         border: 1px solid red !important; }
-      .feedback__form .row .submit {
-        -webkit-transition: opacity 0.2s ease-out;
-        transition: opacity 0.2s ease-out;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        margin-left: 1.8rem;
-        text-decoration: none;
-        text-transform: lowercase;
-        width: 12rem; }
-        .feedback__form .row .submit:hover {
-          opacity: .9; }
+    .feedback__form .policy {
+      margin-top: 1.5rem; }
+    .feedback__form .submit {
+      font-size: 15px;
+      font-size: 1.5rem;
+      -webkit-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out;
+      background-color: #0563bf;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+      padding: 1rem 4rem;
+      text-decoration: none;
+      margin-top: 2rem;
+      text-transform: uppercase; }
+      .feedback__form .submit:hover {
+        opacity: .9; }
+
+.policy {
+  color: #808080; }
+  .policy a {
+    color: #0563bf;
+    text-decoration: none; }
+
+.user-access + label {
+  cursor: pointer; }
+
+.user-access:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.user-access:not(checked) + label {
+  display: block;
+  position: relative;
+  /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 40px;
+  /* оставляем слева от label место под псевдочекбокс */ }
+
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #808080; }
+
+/* Меняем фон чекбокса, когда он включен. */
+.user-access:checked + label:before {
+  border-color: #0563bf; }
+
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+  content: '*';
+  position: absolute;
+  top: -3px;
+  left: 7px;
+  width: 22px;
+  height: 22px;
+  font-size: 30px; }
+
+input.submit:disabled {
+  background: rgba(128, 128, 128, 0.3) !important;
+  cursor: default; }
+  input.submit:disabled:hover {
+    opacity: 1 !important; }
+
+.form-control,
+textarea {
+  -webkit-transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out; }
 
 /* =mobile-menu
 ---------------------------*/
