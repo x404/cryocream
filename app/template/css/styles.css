@@ -532,9 +532,23 @@ label.error {
     text-decoration: none; }
 
 .partners .flexbox {
-  margin-top: 2rem;
+  align-items: center;
+  height: 100%;
   justify-content: space-between;
-  align-items: center; }
+  margin-top: 2rem; }
+
+.partners__item a {
+  border: 1px solid rgba(255, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 1rem; }
+  .partners__item a:hover {
+    border: 1px solid #007abb; }
+  .partners__item a img {
+    display: block; }
 
 .feedback {
   background-color: rgba(255, 255, 255, 0.8);
