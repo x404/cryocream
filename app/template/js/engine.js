@@ -55,6 +55,13 @@ $(document).ready(function(){
 			1550:{
 				items:3
 			}
+		},
+		onInitialized: function (event) {
+			refreshMiddle();
+		},		
+		onTranslated: function (event) {
+			refreshMiddle();
+			console.log(event);
 		}
 	});
 
@@ -191,4 +198,16 @@ function stopClock(){
 function startClock(sendform){
 	if (!timer)
 		timer = window.setInterval("showTime('" + sendform + "')",1000);
+}
+
+
+function refreshMiddle(){
+	$('#foo2 .owl-item').removeClass('big');
+
+	$('#foo2 .owl-stage .owl-item.active').each(function(index){
+		console.log(index);
+		if (index === 1) {
+			$(this).addClass('big');
+		}
+	})
 }
