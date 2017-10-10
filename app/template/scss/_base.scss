@@ -240,14 +240,14 @@ header{
 				text-decoration: none;
 			}
 			.subnav{
-				opacity: 0;
+				@include transition-param;
 				left: 0;
 				min-width: 14rem;
+				opacity: 0;
 				padding-top: 19px;
 				position: absolute;
 				text-align: center;
 				top: 18px;
-				@include transition-param;
 				&:before{
 					@extend .before;
 					background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAMAAAAm/38fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAbFBMVEUAerv///8AersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAerv///+S3MNVAAAAInRSTlMAAEoHObYB3oct1Hsi/gbJbxj8vWMQ+bFXCvS1pe2ZQALlDFFEEAAAAAFiS0dEAf8CLd4AAAAHdElNRQfhCgoKGwpwtT0QAAAAYElEQVQoz3XJRwqAMAAEwNh77133/48UMQgm2bmOsB1h5npk/IBNCDIR2MRsEpBJs2dywxQgU4JMVbNpQKYFma5nM4DMCDLT/M3ynxXaWC9oI2PTRsYOdWQcUEfGeSlzA/bUFtpzyeo9AAAAAElFTkSuQmCC") no-repeat left top;
@@ -256,12 +256,16 @@ header{
 					top: 4px;
 					width: 15px;
 				}
-				ul{
+				ul,
+				.text{
 					background: $color6;
-					border-radius: 8px;					
+					border-radius: 8px;
+					color: $color2;
+					margin: 0;
+					padding: .4rem 0;	
 				}
 				li{
-					padding: .6rem 0;
+					padding: .4rem 0;
 					a{
 						color: $color2;
 						@extend .tdn;
@@ -271,6 +275,23 @@ header{
 							text-decoration: underline;
 						}
 					}
+				}
+
+				&-text{
+					left: -150px;
+					min-width: 40rem;
+					text-align: left;
+					&:before{
+						filter: FlipH;
+						left: 50%;
+						transform: scaleX(-1);
+					}
+				}
+				.text{
+					padding-top: 1rem;
+					padding-bottom: 1rem;					
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
 				}
 			}
 			&:hover{

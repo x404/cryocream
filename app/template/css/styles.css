@@ -250,30 +250,47 @@ header .logo {
         color: #fff;
         text-decoration: none; }
       .nav > ul > li .subnav {
-        opacity: 0;
+        -webkit-transition: opacity 0.2s ease-out;
+        transition: opacity 0.2s ease-out;
         left: 0;
         min-width: 14rem;
+        opacity: 0;
         padding-top: 19px;
         position: absolute;
         text-align: center;
-        top: 18px;
-        -webkit-transition: opacity 0.2s ease-out;
-        transition: opacity 0.2s ease-out; }
+        top: 18px; }
         .nav > ul > li .subnav:before {
           background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAMAAAAm/38fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAbFBMVEUAerv///8AersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAersAerv///+S3MNVAAAAInRSTlMAAEoHObYB3oct1Hsi/gbJbxj8vWMQ+bFXCvS1pe2ZQALlDFFEEAAAAAFiS0dEAf8CLd4AAAAHdElNRQfhCgoKGwpwtT0QAAAAYElEQVQoz3XJRwqAMAAEwNh77133/48UMQgm2bmOsB1h5npk/IBNCDIR2MRsEpBJs2dywxQgU4JMVbNpQKYFma5nM4DMCDLT/M3ynxXaWC9oI2PTRsYOdWQcUEfGeSlzA/bUFtpzyeo9AAAAAElFTkSuQmCC") no-repeat left top;
           height: 15px;
           left: 33px;
           top: 4px;
           width: 15px; }
-        .nav > ul > li .subnav ul {
+        .nav > ul > li .subnav ul,
+        .nav > ul > li .subnav .text {
           background: #007abb;
-          border-radius: 8px; }
+          border-radius: 8px;
+          color: #fff;
+          margin: 0;
+          padding: .4rem 0; }
         .nav > ul > li .subnav li {
-          padding: .6rem 0; }
+          padding: .4rem 0; }
           .nav > ul > li .subnav li a {
             color: #fff; }
           .nav > ul > li .subnav li.active a, .nav > ul > li .subnav li.active span {
             text-decoration: underline; }
+        .nav > ul > li .subnav-text {
+          left: -150px;
+          min-width: 40rem;
+          text-align: left; }
+          .nav > ul > li .subnav-text:before {
+            filter: FlipH;
+            left: 50%;
+            transform: scaleX(-1); }
+        .nav > ul > li .subnav .text {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem; }
       .nav > ul > li:hover > a {
         border-bottom: 1px dashed white; }
       .nav > ul > li:hover .subnav {

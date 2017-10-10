@@ -205,7 +205,6 @@ function refreshMiddle(){
 	$('#foo2 .owl-item').removeClass('big');
 
 	$('#foo2 .owl-stage .owl-item.active').each(function(index){
-		console.log(index);
 		if (index === 1) {
 			$(this).addClass('big');
 		}
