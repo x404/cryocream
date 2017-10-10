@@ -1,17 +1,30 @@
+/* =catalog
+---------------------------*/
 .catalog{
+	margin-top: 3rem;
 	.flexbox{
 		justify-content: space-between;
+		margin-bottom: 3.3rem;
 	}
 
 	&__item{
 		position: relative;
 		$s: 200px;
+		img{
+			vertical-align: top;
+		}
 		&:before{
 			@extend .before;
 			height: $s;
 			width: $s;
 			background: url(../images/mask.png) no-repeat left top;
 			z-index: 1;
+			@include transition-param;
+		}
+		&:hover{
+			&:before{
+				opacity: 0;
+			}
 		}
 		&-title{
 			@extend .bold;
@@ -31,14 +44,22 @@
 			align-items: center;
 			justify-content: center;
 		}
+
+		&-link{
+			display: block;
+		}
 	}
 }
+/* =/catalog
+---------------------------*/
 
 
 .home{
 	&__gallery{
+		margin-top: 2.8rem;
 		.flexbox{
 			justify-content: space-between;
+			margin: 2rem 0 2.8rem;
 		}
 		&-item{
 			a{
@@ -49,14 +70,14 @@
 				}
 				&:after{
 					@extend .before;
+					@include transition;
 					background:url(../images/zoom.png) no-repeat center center rgba(0, 122, 187, .55);
 					height: 100%;
 					left: 0;
-					top: 0;
-					width: 100%;
 					opacity: 0;
+					top: 0;
 					transform: scale(.7);
-					@include transition;
+					width: 100%;
 				}
 
 				&:hover{
@@ -65,15 +86,18 @@
 						opacity: 1;
 					}
 				}
-
 			}
 		}
 	}
 }
 
-.product{
 
+/* =product
+---------------------------*/
+.product{
 	&__carousel{
+		margin-top: 2rem;
+		margin-bottom: 3rem;
 		.owl{
 			&-dots{
 				@include justify-content(center);
@@ -115,6 +139,10 @@
 						@include rotation(180deg);
 					}
 				}
+			}
+
+			&-item:not(.big){
+				// transform: scale(.8)
 			}
 		}
 	}
@@ -196,8 +224,15 @@
 		}
 	}
 }
+/* =/product
+---------------------------*/
 
+
+
+/* =partners
+---------------------------*/
 .partners{
+	margin-top: 2.8rem;
 	.flexbox{
 		align-items: center;
 		height: 100%;
@@ -222,7 +257,12 @@
 		}
 	}
 }
+/* =/partners
+---------------------------*/
 
+
+/* =feedback
+---------------------------*/
 .feedback{
 	background-color: rgba(255, 255, 255, .8);
 	margin-left: auto;
@@ -231,7 +271,7 @@
 	z-index: 999;
 	.vcard{
 		@include font-size(1.5);
-		margin-bottom: 1rem;
+		margin-bottom: 1.4rem;
 		.name{
 			display: none;
 		}
@@ -250,7 +290,7 @@
 	}
 
 	&__content{
-		padding: 1rem 0 .8rem;
+		padding: .8rem 0 1rem;
 	}
 	&__form{
 		margin-left: auto;
@@ -283,7 +323,7 @@
 				@extend .italic;
 				flex: 1;
 				overflow: hidden;
-				height: 7rem;
+				height: 6.2rem;
 				@include placeholder($color1);
 			}
 
@@ -293,7 +333,7 @@
 		}
 
 		.policy{
-			margin-top: 1.5rem;
+			margin-top: 1.9rem;
 		}
 
 		.submit{
@@ -301,13 +341,13 @@
 			@include transition-param();
 			@extend .block-center;
 			background-color: $color7;
-			border: none;
 			border-radius: 3px;
+			border: none;
 			color: $color2;
 			cursor: pointer;
-			padding: 1rem 4rem;
+			margin-top: 2.5rem;
+			padding: 0.8rem 4.2rem;
 			text-decoration: none;
-			margin-top: 2rem;
 			text-transform: uppercase;
 			@extend .bold;
 			&:hover{
@@ -316,9 +356,18 @@
 		}
 	}
 }
+/* =/feedback
+---------------------------*/
 
 
 
+.map{
+	margin-top: 2.5rem;
+}
+
+
+/* =policy
+---------------------------*/
 .policy{
 	@extend .italic;
 	color: $color8;
@@ -327,6 +376,8 @@
 		text-decoration: none;
 	}
 }
+/* =/policy
+---------------------------*/
 
 
 .user-access + label {
