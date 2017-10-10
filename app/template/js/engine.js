@@ -109,7 +109,10 @@ $(document).ready(function(){
 				}
 			}).fail(function(error){alert(errorTxt)});
 		}
-	}); 	
+	}); 
+
+
+	$("[data-fancybox]").fancybox();	
 });
 
 // =заглушка для IE
