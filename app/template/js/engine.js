@@ -1,5 +1,39 @@
 $(document).ready(function(){
 
+	// mobile-menu
+	$('#navbar').each(function(){
+		var $this = $(this),
+			$link = $('.navbar-toggle'),
+			$close = $('.close-menu'),
+
+			init = function(){
+				$link.on('click', openMenu);
+				$close.on('click', closeMenu);
+			},
+			openMenu = function(e){
+				e.preventDefault();
+				var h = $(window).height();
+				$('body').addClass('o-menu');
+				$('#navbar').height(h);
+			},
+			closeMenu = function(e){
+				e.preventDefault();
+				$('body').removeClass('o-menu');
+				$('#navbar').height('auto');
+			};
+		init();
+	});	
+
+
+
+	$(window).resize(function(){
+		if ($('body').width() > 640) {
+			$('body').removeClass('o-menu');
+			$('#navbar').css('height', 'auto');
+		}
+	});
+
+
 	// карусель
 	$('#foo1').owlCarousel({
 		loop:false,
@@ -223,3 +257,13 @@ function refreshMiddle(){
 		}
 	})
 }
+
+
+// показываем второй  уровень меню
+$(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(e){
+	e.preventDefault();
+	let $this = $(this);
+
+	$this.next('.subnav').slideToggle().prev().toggleClass('open');
+
+})

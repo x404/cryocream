@@ -233,6 +233,10 @@ header{
 		&>li{
 			margin: 0 1.5rem;
 			position: relative;
+			span{
+				color: $color2;
+				cursor: pointer;
+			}
 			&>a{
 				@include transition-param(border-bottom);
 				border-bottom: 1px dashed rgba(255,255,255,0);

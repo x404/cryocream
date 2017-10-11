@@ -1,5 +1,3 @@
-$color2: #fff; 
-$color5: green;
 
 
 /* =mobile-menu
@@ -14,9 +12,12 @@ $color5: green;
 
 
 
-@media (max-width: 767px){
+@media (max-width: 840px){
+	.nav{
+
+	}
 	.navbar-toggle{
-		background-color: $color5;
+		background-color: $color7;
 		border: none;
 		cursor: pointer;
 		display: block;
@@ -27,6 +28,7 @@ $color5: green;
 		top: 0;
 		width: 70px;
 		z-index: 99;
+		@include transition-param(background-color);
 		.icon-bar{
 			background-color: $color2;
 			display: block;
@@ -37,15 +39,13 @@ $color5: green;
 		&:hover{
 			background-color: $color2;
 			.icon-bar{
-				background-color: $color5;
+				background-color: $color7;
 			}
 		}
 	}
 
 
 	.o-menu{
-		.header{
-		}
 		.close-menu{
 			display: block;
 			transform: translate(0, 0);
@@ -65,7 +65,7 @@ $color5: green;
 		cursor: pointer;
 		padding: 0;
 		left: 215px;
-		background-color: $color5;
+		background-color: $color7;
 		border: none;
 		height: 70px;
 		position: absolute;
@@ -77,183 +77,108 @@ $color5: green;
 
 
 	#navbar{
-		transition: all .2s ease-out;
-		background-color: $color5;
-		color: $color5;
+		background-color: $color7;
+		box-shadow: none;
+		color: $color7;
 		display: block;
 		left: 0;
-		padding-top: 15px;
+		margin-left: 0;
+		margin-top: 0;
+		outline: none;
+		padding-top: 0;
 		position: absolute;
 		top: 0;
 		transform: translate(-305px, 0);
+		transition: all .2s ease-out;
 		width: 230px;
-		.container{
-			padding: 0;
-		}
+
 		ul.mainnav{
 			background: none;
 			display: block;
 			font-size: 15px;
-			margin-top: 0;
+			margin-top: 14px;
 			padding-left: 15px;
-			ul{
-				position: static; 
+			.subnav{
+				display: none;
+				margin-top: -15px;
 				opacity: 1;
-				background: none;
-				font-size: 14px !important;
-				li:after{
-					top: 12px;
+				padding-top: 0;
+				padding-left: 20px;
+				position: static;
+				&:before{
+					display: none;
+				}
+				&-text{
+					display: none !important;
 				}
 			}
 			& > li.folder > a,
 			& > li.folder > span
 			{
 				&:after{
-					top: 24px !important;
+					background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi+P//vw0QBwMxAzbMxMDA4ALEa4A4iQEbAKoSB+Lt/yEgBd0EGIMXiHdAFSVjUwDCfEC8C90kdEcJQa37A8T5QCyBzeUCQHwXalIfuiQTEHdBJecBsRGyJCMQ98N0YnMDTLIfahJcAQcQ9yJJYoRDEVSyF2oNhgIfIM7FJgnCAAEGAKmlN490MQwsAAAAAElFTkSuQmCC") no-repeat right top;
+					content: "";
+					height: 14px;
+					left: 50%;
+					position: absolute;
+					top: 22px !important;
+					width: 8px;					
+				}
+
+				&.open{
+					&:after{
+						@include rotation(90deg);
+					}
 				}
 			}
+
+
 			& > li.active > a{
 				text-decoration: underline;				
 			}
-			li{ // 1 level
+			& > li{ // 0 level
 				border-bottom: 1px solid #fff;
+				margin-left: 0;
+				margin-right: 0;
+				padding: 0;
 				a, span{
 					color: $color2;
 					display: block;
 					height: auto;
 					line-height: normal;
 					padding: 18px 0 18px 10px;
+					text-align: left;
 					text-decoration: none;
 					text-transform: none;
+					border-bottom: none;
 					&:hover{
 						color: #fff;
 						text-decoration: underline;
 					}
 				}
-				&.active,
-				&:hover{
-					a, span{
-						background: none;
-					}
-					border-bottom: 1px solid #fff;
-					color: #fff;
-				}
 
-				&.folder{
-					& > a,
-					& > span{
-						position: relative;
-						&:after{
-							background: url(../images/arrow.png) no-repeat left bottom;
-							content: "";
-							display: block;
-							height: 12px;
-							position: absolute;
-							right: 10px;
-							top: 9px;
-							width: 8px;
+				ul{
+					background: none;
+					font-size: 14px !important;
+					opacity: 1;
+					position: static; 
+					li{
+						a,
+						span{
+							padding: .5rem 0 .5rem 1.8rem;
 						}
 					}
-					ul.show{
-						display: block;
-					}
-					&.open > a,
-					&.open > span{
-						&:after{
-							background-position: left top;
-							width: 12px;
-							height: 8px;
-						}						
-					}
-
-					.folder{ // 2 level
-						padding-left: .5rem;
-						padding-right: 0;
-						& > a,
-						& > span{
-							&:after{
-								display: none;
-							}
-						}
-						li{
-							ul{
-								li{
-									position: relative;
-									a:before{
-										content: "-";
-										z-index: 10;
-										position: absolute;
-										left: 4px;
-										top: 8px;
-									}
-								}
-								&.folder{
-									& > ul{
-										display: none !important;										
-									}
-								}
-							}
+					& > li{
+						a,span{
+							padding: 0;
 						}
 					}
 				}
 
 				&.active{
-					a, span{
-						// text-decoration: underline;
-					}
 					a{
 						&:hover{
 							color : #fff;
-						}						
-					}
-
-					& > ul{
-						display: block;
-						.active .active a{
-							font-weight: bold;
-							text-decoration: underline;
-						}
-					}
-				}
-
-				ul{
-					display: none;
-					font-size: 12px;
-					width: auto !important;
-					border-top: none;
-					li{
-						border-bottom: none;
-						padding-left: 7px;
-						a, span{
-							padding: 10px 0 10px 10px;
-
-						}
-						&.active,
-						&:hover{
-							border-bottom: none;
-							color: $color5;
-						}
-
-						ul{ // 2level
-							padding-top: 0;
-							li{
-								padding-right: 0;
-								&:hover{
-									background: none;
-								}
-								&.folder.active > a{
-									text-decoration: underline;
-								}
-								ul{
-									li{
-										&.active{
-											a{
-												text-decoration: underline;
-											}
-										}
-									}
-								}
-							}
 						}
 					}
 				}

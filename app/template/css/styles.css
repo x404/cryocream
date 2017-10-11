@@ -243,6 +243,9 @@ header .logo {
     .nav > ul > li {
       margin: 0 1.5rem;
       position: relative; }
+      .nav > ul > li span {
+        color: #fff;
+        cursor: pointer; }
       .nav > ul > li > a {
         -webkit-transition: border-bottom 0.2s ease-out;
         transition: border-bottom 0.2s ease-out;
@@ -773,9 +776,9 @@ textarea {
 
 /* =/mobile-menu
 ---------------------------*/
-@media (max-width: 767px) {
+@media (max-width: 840px) {
   .navbar-toggle {
-    background-color: green;
+    background-color: #0563bf;
     border: none;
     cursor: pointer;
     display: block;
@@ -785,7 +788,9 @@ textarea {
     text-align: center;
     top: 0;
     width: 70px;
-    z-index: 99; }
+    z-index: 99;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
     .navbar-toggle .icon-bar {
       background-color: #fff;
       display: block;
@@ -795,7 +800,7 @@ textarea {
     .navbar-toggle:hover {
       background-color: #fff; }
       .navbar-toggle:hover .icon-bar {
-        background-color: green; }
+        background-color: #0563bf; }
   .o-menu .close-menu {
     display: block;
     transform: translate(0, 0); }
@@ -812,7 +817,7 @@ textarea {
     cursor: pointer;
     padding: 0;
     left: 215px;
-    background-color: green;
+    background-color: #0563bf;
     border: none;
     height: 70px;
     position: absolute;
@@ -821,120 +826,83 @@ textarea {
     width: 70px;
     z-index: 99; }
   #navbar {
-    transition: all .2s ease-out;
-    background-color: green;
-    color: green;
+    background-color: #0563bf;
+    box-shadow: none;
+    color: #0563bf;
     display: block;
     left: 0;
-    padding-top: 15px;
+    margin-left: 0;
+    margin-top: 0;
+    outline: none;
+    padding-top: 0;
     position: absolute;
     top: 0;
     transform: translate(-305px, 0);
+    transition: all .2s ease-out;
     width: 230px; }
-    #navbar .container {
-      padding: 0; }
     #navbar ul.mainnav {
       background: none;
       display: block;
       font-size: 15px;
-      margin-top: 0;
+      margin-top: 14px;
       padding-left: 15px; }
-      #navbar ul.mainnav ul {
-        position: static;
+      #navbar ul.mainnav .subnav {
+        display: none;
+        margin-top: -15px;
         opacity: 1;
-        background: none;
-        font-size: 14px !important; }
-        #navbar ul.mainnav ul li:after {
-          top: 12px; }
+        padding-top: 0;
+        padding-left: 20px;
+        position: static; }
+        #navbar ul.mainnav .subnav:before {
+          display: none; }
+        #navbar ul.mainnav .subnav-text {
+          display: none !important; }
       #navbar ul.mainnav > li.folder > a:after,
       #navbar ul.mainnav > li.folder > span:after {
-        top: 24px !important; }
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi+P//vw0QBwMxAzbMxMDA4ALEa4A4iQEbAKoSB+Lt/yEgBd0EGIMXiHdAFSVjUwDCfEC8C90kdEcJQa37A8T5QCyBzeUCQHwXalIfuiQTEHdBJecBsRGyJCMQ98N0YnMDTLIfahJcAQcQ9yJJYoRDEVSyF2oNhgIfIM7FJgnCAAEGAKmlN490MQwsAAAAAElFTkSuQmCC") no-repeat right top;
+        content: "";
+        height: 14px;
+        left: 50%;
+        position: absolute;
+        top: 22px !important;
+        width: 8px; }
+      #navbar ul.mainnav > li.folder > a.open:after,
+      #navbar ul.mainnav > li.folder > span.open:after {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
       #navbar ul.mainnav > li.active > a {
         text-decoration: underline; }
-      #navbar ul.mainnav li {
-        border-bottom: 1px solid #fff; }
-        #navbar ul.mainnav li a, #navbar ul.mainnav li span {
+      #navbar ul.mainnav > li {
+        border-bottom: 1px solid #fff;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0; }
+        #navbar ul.mainnav > li a, #navbar ul.mainnav > li span {
           color: #fff;
           display: block;
           height: auto;
           line-height: normal;
           padding: 18px 0 18px 10px;
+          text-align: left;
           text-decoration: none;
-          text-transform: none; }
-          #navbar ul.mainnav li a:hover, #navbar ul.mainnav li span:hover {
+          text-transform: none;
+          border-bottom: none; }
+          #navbar ul.mainnav > li a:hover, #navbar ul.mainnav > li span:hover {
             color: #fff;
             text-decoration: underline; }
-        #navbar ul.mainnav li.active, #navbar ul.mainnav li:hover {
-          border-bottom: 1px solid #fff;
-          color: #fff; }
-          #navbar ul.mainnav li.active a, #navbar ul.mainnav li.active span, #navbar ul.mainnav li:hover a, #navbar ul.mainnav li:hover span {
-            background: none; }
-        #navbar ul.mainnav li.folder > a,
-        #navbar ul.mainnav li.folder > span {
-          position: relative; }
-          #navbar ul.mainnav li.folder > a:after,
-          #navbar ul.mainnav li.folder > span:after {
-            background: url(../images/arrow.png) no-repeat left bottom;
-            content: "";
-            display: block;
-            height: 12px;
-            position: absolute;
-            right: 10px;
-            top: 9px;
-            width: 8px; }
-        #navbar ul.mainnav li.folder ul.show {
-          display: block; }
-        #navbar ul.mainnav li.folder.open > a:after,
-        #navbar ul.mainnav li.folder.open > span:after {
-          background-position: left top;
-          width: 12px;
-          height: 8px; }
-        #navbar ul.mainnav li.folder .folder {
-          padding-left: .5rem;
-          padding-right: 0; }
-          #navbar ul.mainnav li.folder .folder > a:after,
-          #navbar ul.mainnav li.folder .folder > span:after {
-            display: none; }
-          #navbar ul.mainnav li.folder .folder li ul li {
-            position: relative; }
-            #navbar ul.mainnav li.folder .folder li ul li a:before {
-              content: "-";
-              z-index: 10;
-              position: absolute;
-              left: 4px;
-              top: 8px; }
-          #navbar ul.mainnav li.folder .folder li ul.folder > ul {
-            display: none !important; }
-        #navbar ul.mainnav li.active a:hover {
-          color: #fff; }
-        #navbar ul.mainnav li.active > ul {
-          display: block; }
-          #navbar ul.mainnav li.active > ul .active .active a {
-            font-weight: bold;
-            text-decoration: underline; }
-        #navbar ul.mainnav li ul {
-          display: none;
-          font-size: 12px;
-          width: auto !important;
-          border-top: none; }
-          #navbar ul.mainnav li ul li {
-            border-bottom: none;
-            padding-left: 7px; }
-            #navbar ul.mainnav li ul li a, #navbar ul.mainnav li ul li span {
-              padding: 10px 0 10px 10px; }
-            #navbar ul.mainnav li ul li.active, #navbar ul.mainnav li ul li:hover {
-              border-bottom: none;
-              color: green; }
-            #navbar ul.mainnav li ul li ul {
-              padding-top: 0; }
-              #navbar ul.mainnav li ul li ul li {
-                padding-right: 0; }
-                #navbar ul.mainnav li ul li ul li:hover {
-                  background: none; }
-                #navbar ul.mainnav li ul li ul li.folder.active > a {
-                  text-decoration: underline; }
-                #navbar ul.mainnav li ul li ul li ul li.active a {
-                  text-decoration: underline; } }
+        #navbar ul.mainnav > li ul {
+          background: none;
+          font-size: 14px !important;
+          opacity: 1;
+          position: static; }
+          #navbar ul.mainnav > li ul li a,
+          #navbar ul.mainnav > li ul li span {
+            padding: .5rem 0 .5rem 1.8rem; }
+          #navbar ul.mainnav > li ul > li a, #navbar ul.mainnav > li ul > li span {
+            padding: 0; }
+        #navbar ul.mainnav > li.active a:hover {
+          color: #fff; } }
 
 ::-ms-clear {
   display: none; }
