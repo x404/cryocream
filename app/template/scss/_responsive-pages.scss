@@ -1,2 +1,60 @@
 @media (max-width: 1024px){
 }
+
+@media (max-width: 920px){
+	.feedback{
+		width: 100%;
+	}
+}
+
+
+
+@media (max-width: 790px){
+	.feedback__form{
+		width: 100%;
+		.row input.form-control{
+			width: 30%;
+		}
+	} 
+}
+
+@media (max-width: 775px){
+	.feedback__form{
+		width: 100%;
+		.policy{
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
+
+@media (max-width: 730px){
+	.feedback__form .row{
+		flex-flow: column;
+		input.form-control{
+			width: 100%;
+		}
+	}
+
+	.footer{
+		&__menu{
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 460px){
+	.product{
+		$w: 240px;
+		&__item,
+		&__textbox{
+			left: 0;
+			width: $w;
+		}
+		&__textbox{
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+}

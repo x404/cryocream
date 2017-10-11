@@ -40,16 +40,29 @@ $(document).ready(function(){
 		responsive:{
 			0:{
 				items:1,
+				stagePadding: 14
+			},
+			335:{
+				items:1,
 				stagePadding: 20
 			},
-			900:{
-				items:2,
+			380:{
+				items:1,
+				stagePadding: 30
+			},			
+			415:{
+				items:1,
+				stagePadding: 40
+			},
+			525:{
+				items:1,
+				stagePadding: 80
+			},
+			767:{
+				items:1,
 				stagePadding: 0
 			},
-			992:{
-				items:1
-			},
-			1250:{
+			991:{
 				items:2
 			},
 			1550:{

@@ -938,3 +938,101 @@ textarea {
 
 ::-ms-clear {
   display: none; }
+
+@media (max-width: 1260px) {
+  header .logo {
+    left: 0; }
+  .nav > ul > li .subnav-text {
+    left: auto;
+    right: 0; }
+    .nav > ul > li .subnav-text:before {
+      left: auto;
+      right: 45px; } }
+
+@media (max-width: 1199px) {
+  .home__gallery .flexbox,
+  .catalog .flexbox,
+  .partners .flexbox {
+    flex-wrap: wrap; }
+  .home__gallery-item, .home__gallery__item,
+  .catalog-item,
+  .catalog__item,
+  .partners-item,
+  .partners__item {
+    margin: 0 auto 2rem; }
+  .footer__content {
+    width: 100%; } }
+
+@media (max-width: 1050px) {
+  .nav > ul {
+    justify-content: space-between; }
+    .nav > ul > li {
+      margin: 0 .5rem; }
+  .footer__menu ul {
+    width: 100%; } }
+
+@media (max-width: 991px) {
+  .footer__menu {
+    margin-bottom: 0; }
+  .footer__content .flexbox {
+    flex-wrap: wrap; }
+  .footer__item {
+    margin: 1rem 0;
+    padding-right: 0;
+    text-align: center;
+    width: 50%; }
+    .footer__item:last-child {
+      width: 50%; } }
+
+@media (max-width: 530px) {
+  .footer__content .flexbox {
+    display: block; }
+  .footer__item {
+    margin: 2rem 0;
+    width: 100%; }
+    .footer__item:last-child {
+      width: 100%; }
+  .text {
+    text-align: justify;
+    hyphens: auto; } }
+
+@media (max-width: 450px) {
+  #navbar {
+    display: none !important; }
+  .owl-prev, .owl-next {
+    display: none !important; }
+  .logo img {
+    max-width: 100%; } }
+
+@media (max-width: 920px) {
+  .feedback {
+    width: 100%; } }
+
+@media (max-width: 790px) {
+  .feedback__form {
+    width: 100%; }
+    .feedback__form .row input.form-control {
+      width: 30%; } }
+
+@media (max-width: 775px) {
+  .feedback__form {
+    width: 100%; }
+    .feedback__form .policy {
+      display: flex;
+      justify-content: center; } }
+
+@media (max-width: 730px) {
+  .feedback__form .row {
+    flex-flow: column; }
+    .feedback__form .row input.form-control {
+      width: 100%; }
+  .footer__menu {
+    display: none; } }
+
+@media (max-width: 460px) {
+  .product__item, .product__textbox {
+    left: 0;
+    width: 240px; }
+  .product__textbox {
+    padding-left: 5px;
+    padding-right: 5px; } }
