@@ -58,15 +58,28 @@ $(document).ready(function(){
 				items:1,
 				stagePadding: 20
 			},
+			350:{
+				items:1,
+				stagePadding: 30
+			},
+			400:{
+				items:1,
+				stagePadding: 55
+			},
+			470:{
+				items:1,
+				stagePadding: 90
+			},
+			550:{
+				items:1,
+				stagePadding: 120
+			},			
+			700:{
+				items:1,
+				stagePadding: 150
+			},
 			900:{
 				items:2,
-				stagePadding: 0
-			},
-			992:{
-				items:1
-			},
-			1250:{
-				items:2
 			},
 			1550:{
 				items:3
