@@ -34,6 +34,14 @@ $(document).ready(function(){
 	});
 
 
+	$('.subnav-text .close').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+		$this.closest('.show-event').removeClass('show-event');
+		$this.remove();
+	})
+
+
 	// карусель
 	$('#foo1').owlCarousel({
 		loop:false,
@@ -263,7 +271,16 @@ function refreshMiddle(){
 $(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(e){
 	e.preventDefault();
 	let $this = $(this);
-
 	$this.next('.subnav').slideToggle().prev().toggleClass('open');
+})
 
+
+
+$(document).on('mouseover', '.mainnav li:not(.show-event)',	function(){
+	$(this).addClass('hover');
+})
+
+
+$(document).on('mouseleave', '.mainnav li:not(.show-event)',	function(){
+	$(this).removeClass('hover');
 })

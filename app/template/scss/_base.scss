@@ -77,9 +77,9 @@ input::-moz-focus-inner{
 /*** standart classes *****/
 p{margin: .5rem 0; line-height: 1.2}
 a{color:$color6}
-h1{font-size:2.5rem}
-h2{font-size:2.4rem}
-h3{font-size:1.6rem}
+h1{font-size:2.4rem; @extend .bold;}
+h2{font-size:2.2rem}
+h3{font-size:1.8rem}
 
 
 *:focus{outline:none}
@@ -243,6 +243,20 @@ header{
 				color: $color2;
 				text-decoration: none;
 			}
+
+			&.hover{
+				.subnav-text{
+					opacity: 1;
+				}
+			}
+
+			&.show-event{
+				.subnav-text{
+					opacity: 1;
+				}
+			}
+
+
 			.subnav{
 				@include transition-param;
 				left: 0;
@@ -278,17 +292,24 @@ header{
 						a,span{
 							text-decoration: underline;
 						}
-					}
+					}				
 				}
 
 				&-text{
+					opacity: 0;
 					left: -150px;
 					min-width: 40rem;
 					text-align: left;
+					// position: relative;
 					&:before{
 						filter: FlipH;
 						left: 50%;
 						transform: scaleX(-1);
+					}
+					.close{
+						position: absolute;
+						right: 10px;
+						top: 32px;
 					}
 				}
 				.text{
@@ -302,7 +323,7 @@ header{
 				& > a{
 					border-bottom: 1px dashed rgba(255,255,255,1);
 				}
-				.subnav{
+				.subnav:not(.subnav-text){
 					opacity: 1;
 					z-index: 99;
 				}
