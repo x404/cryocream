@@ -469,6 +469,8 @@ label.error {
     left: -284px; }
   .video-carousel .owl-next {
     right: -284px; }
+  .video-carousel .owl-item:not(.big) {
+    transform: scale(0.9); }
 .video__item {
   padding: 15px 0;
   text-align: center; }

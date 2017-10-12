@@ -71,6 +71,13 @@ $(document).ready(function(){
 			1550:{
 				items:3
 			}
+		},
+		onInitialized: function (event) {
+			refreshMiddle('foo1');
+		},		
+		onTranslated: function (event) {
+			refreshMiddle('foo1');
+			console.log(event);
 		}
 	});
 
@@ -114,11 +121,10 @@ $(document).ready(function(){
 			}
 		},
 		onInitialized: function (event) {
-			refreshMiddle();
+			refreshMiddle('foo2');
 		},		
 		onTranslated: function (event) {
-			refreshMiddle();
-			console.log(event);
+			refreshMiddle('foo2');
 		}
 	});
 
@@ -258,10 +264,11 @@ function startClock(sendform){
 }
 
 
-function refreshMiddle(){
-	$('#foo2 .owl-item').removeClass('big');
+function refreshMiddle(id){
+	console.log(id);
+	$('#' + id + ' .owl-item').removeClass('big');
 
-	$('#foo2 .owl-stage .owl-item.active').each(function(index){
+	$('#' + id + ' .owl-stage .owl-item.active').each(function(index){
 		if (index === 1) {
 			$(this).addClass('big');
 		}

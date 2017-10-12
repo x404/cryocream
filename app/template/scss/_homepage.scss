@@ -33,6 +33,16 @@
 			&-next{
 				right: $x;
 			}
+
+			&-item{
+				@include transition-param(transform);
+				&:not(.big){
+					transform: scale(.9);
+				}
+				&.big img{
+					border-color: rgba(255,255,255, .85);
+				}
+			}
 		}
 	}
 	&__item{
@@ -154,8 +164,8 @@
 
 .product{
 	&__carousel{
-		margin-top: 2rem;
-		margin-bottom: 3rem;
+		margin: 2rem auto 3rem;
+		width: 990px;
 	}
 
 
@@ -163,16 +173,39 @@
 		&-nav{
 			top: 110px;
 		}
+		&-item{
+			@include transition-param(transform);
+			&:not(.big){
+				transform: scale(.9);
+			}
+			&.big img{
+				border-color: rgba(255,255,255, .85);
+			}
+			a{
+				color: $color2;
+			}
+		}
+		$x: -140px;
+		&-prev{
+			left: $x;
+		}
+		&-next{
+			right: $x;
+		}
 	}
 
 
-	$w : 298px;
+	$w : 333px;
 	&__item{
 		@extend .block-center;
 		color: $color2;
 		position: relative;
 		text-align: center;
 		width: $w;
+
+		a{
+			display: block;
+		}
 
 		hr{
 			background: $color2;
@@ -233,14 +266,14 @@
 		text-transform: uppercase;
 	}
 
-	&__more{
-		margin-top: 2rem;
-		&-link{
-			color: $color2;
-			text-decoration: none;
-			@extend .italic;
-		}
-	}
+	// &__more{
+	// 	margin-top: 2rem;
+	// 	&-link{
+	// 		color: $color2;
+	// 		text-decoration: none;
+	// 		@extend .italic;
+	// 	}
+	// }
 }
 /* =/product
 ---------------------------*/
