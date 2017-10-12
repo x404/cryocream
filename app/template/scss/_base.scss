@@ -39,7 +39,7 @@ body{
 	@include flexbox;
 	@include font-size(1.4);
 	@include rounded;
-	background: url(/tmp/bg.jpg) no-repeat center top /cover;
+	// background: url(/tmp/bg.jpg) no-repeat center top /cover;
 	flex-flow: column;
 	font-display: swap;
 	font-family: "SegoeUIRegular", Arial;
@@ -208,14 +208,57 @@ input::-moz-focus-inner{
 }
 
 
+
+.video {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	z-index: -1;
+	margin: 0;
+	&__content{
+		position: absolute;
+		top: -.5%;
+		left: -.5%;
+		width: 101%;
+		height: 101%;
+	}
+
+	&__photo, &__file {
+		position: absolute;
+		min-width: 100%;
+		min-height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__photo {
+		background: no-repeat 50% 50%;
+		background-size: cover;
+	}
+}
+
+
+
+
+
+
+/* =header
+---------------------------*/
 header{
 	.logo{
-		margin-top: 13rem;
 		left: 65px;
+		margin-top: 12.7rem;
 		position: relative;
 		text-align: center;
 	}
 }
+/* =/header
+---------------------------*/
+
 
 
 /* =navigation
@@ -335,32 +378,63 @@ header{
 ---------------------------*/
 
 
-
-
-.owl-carousel{
-	.owl-controls{
+.owl{
+	&-nav{
+		left: 50%;
+		margin-left: -49%;
 		position: absolute;
-		width: 100%;
-		top: 115px;
-		.owl-buttons{
-			.owl-prev,
-			.owl-next{
+		top: 110px;
+		width: 98%;
+		.owl-{
+			&prev,
+			&next{
 				background: url(../images/prevnext.png) no-repeat left top;
-				width: 65px;
-				height: 65px;
+				height: 43px;
 				position: absolute;
+				width: 28px;
+				&.disabled{
+					opacity: .6;
+				}
 			}
-			.owl-prev{
-				left: -110px;
-			}
-			.owl-next{
-				@include sprite;
-				// .rotation(180deg);
-				right: -110px;
+
+			&next{
+				right: 0;
+				@include rotation(180deg);
 			}
 		}
 	}
+
+	&-item:not(.big){
+		// transform: scale(.8)
+	}
 }
+
+
+
+// .owl-carousel{
+// 	.owl-controls{
+// 		position: absolute;
+// 		width: 100%;
+// 		top: 115px;
+// 		.owl-buttons{
+// 			.owl-prev,
+// 			.owl-next{
+// 				background: url(../images/prevnext.png) no-repeat left top;
+// 				width: 65px;
+// 				height: 65px;
+// 				position: absolute;
+// 			}
+// 			.owl-prev{
+// 				left: -110px;
+// 			}
+// 			.owl-next{
+// 				@include sprite;
+// 				// .rotation(180deg);
+// 				right: -110px;
+// 			}
+// 		}
+// 	}
+// }
 
 /* =main
 ---------------------------*/
@@ -500,7 +574,9 @@ footer{
 	text-align: center;
 }
 
-
+.text-right{
+	text-align: right;
+}
 
 label.error{
 	display: none !important;

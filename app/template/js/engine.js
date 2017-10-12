@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	var video = $('#video');
+	if (video.length > 0) document.getElementById("video").play();
+
+
 	// mobile-menu
 	$('#navbar').each(function(){
 		var $this = $(this),
@@ -48,8 +52,6 @@ $(document).ready(function(){
 		nav:true,
 		dots: false,
 		items:3,
-		startPosition : 2,
-		stagePadding : 250,
 		navText: ["", ""],
 		responsive:{
 			0:{
