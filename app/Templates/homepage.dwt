@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+<meta name="robots" content="noindex,nofollow" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Главная</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="/template/css/styles.min.css" />
+
+<!--[if !IE]><!-->
+<script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script>
+<!--<![endif]-->
+
+<!--[if IE]>
+	<link href="/template/css/styles-ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<body>
+
+<div class="outerwrapper">
+
+<!-- TemplateBeginEditable name="video" -->
+  <!-- =video -->
+	<figure class="video">
+	  <div class="video__content">
+		<!-- <img class="video__photo" src="http://amazon.chulakov.ru/dontabak/home/1.jpg"> -->
+		<!-- <i class="demo__play"></i> -->
+		<!-- <i class="demo__loading"></i> -->
+		<video class="video__file" id="video" src="https://player.vimeo.com/external/214660084.hd.mp4?s=9a4622f6a60680805c55987fafc200c6ca5433e3&amp;profile_id=174" preload="none" loop></video>
+	  </div>
+	</figure>
+  <!-- =/video -->
+<!-- TemplateEndEditable -->
+ 
+  <!-- =nav -->
+	<nav id="navbar" class="nav">
+		<ul class="mainnav">
+			<li><a href="#" title="">Главная</a></li>
+			<li class="folder">
+				<span>Продукция</span>
+				<div class="subnav">
+					<ul>
+						<li><a href="#" title="">Мороженое</a></li>
+						<li><a href="#" title="">Крио Мороженое</a></li>
+						<li><a href="#" title="">Крио Коктейль</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="#" title="">Услуги</a></li>
+			<li><a href="#" title="">О нас</a></li>
+			<li><a href="#" title="">Партнеры</a></li>
+			<li><a href="#" title="">Благотворительность</a></li>
+			<li><a href="#" title="">Фотогалерея</a></li>
+			<li><a href="#" title="">Контакты</a></li>
+			<li class="show-event">
+				<a href="#" title="">Мероприятия</a>
+				<div class="subnav subnav-text">
+					<div class="text">
+						В данном блоке будет располагаться краткое описание мероприятия, в две строчки
+					</div>
+					<input type="image" src="/template/images/navclose.png" class="close" />
+				</div>
+			</li>
+		</ul>
+	</nav>
+
+	<button type="button" class="navbar-toggle">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<button type="button" class="close-menu"><img src="../template/images/close.png" alt=""></button>
+	<!-- =/nav -->
+
+
+	<!-- =header -->
+	<header>
+		<div class="logo container">
+			<img src="../template/images/logo.png" alt="CryoCream" />
+		</div>
+	</header>
+	<!-- =/header -->
+	
+	
+	<!-- TemplateBeginEditable name="main" -->
+	
+	<!-- TemplateEndEditable -->
+</div>
+
+
+
+
+<!-- =footer -->
+<footer>
+	<div class="container">
+		<div class="footer__menu">
+			<ul>
+				<li><a href="#" title="">Главная</a></li>
+				<li class="active"><span>Продукция</span></li>
+				<li><a href="#" title="">Услуги</a></li>
+				<li><a href="#" title="">О нас</a></li>
+				<li><a href="#" title="">Партнеры</a></li>
+				<li><a href="#" title="">Благотворительность</a></li>
+				<li><a href="#" title="">Фотогалерея</a></li>
+				<!-- <li><a href="#" title="">Контакты</a></li> -->
+				<li><a href="#" title="">Мероприятия</a></li>
+			</ul>
+		</div>
+
+		<div class="footer__content">
+			<div class="flexbox">
+				<div class="footer__item">
+					<p class="title">АДРЕС</p>
+					<p>191002 Россия, Санкт-Петербург,</p>
+					<p>ул. Ломоносова, д.9</p>
+				</div>
+				<div class="footer__item">
+					<p class="title">КОНТАКТЫ</p>
+					<p>+7 (495) 837-11-67</p>
+					<p><a href="mailto:info@cryocream.ru" title="" class="email">info@cryocream.ru</a></p>
+				</div>
+				<div class="footer__item footer__item-cryocream">
+					<img src="../template/images/logo-small.gif" alt="Cryocream" />
+					<p class="footer__logo-title">CRYOCREAM</p>
+					<p>любовь к криокультуре</p>
+				</div>
+				<div class="footer__item">
+					<div class="footer__social-icons">
+						<a href="#" title="" target="_blank"><img src="../template/images/social/fb.gif" width="35" height="35" alt="Facebook"></a>
+						<a href="#" title="" target="_blank"><img src="../template/images/social/vk.gif" width="35" height="35" alt="Вконтакте"></a>
+						<a href="#" title="" target="_blank"><img src="../template/images/social/twitter.gif" width="35" height="35" alt="Twitter"></a>
+						<a href="#" title="" target="_blank"><img src="../template/images/social/odn.gif" width="35" height="35" alt="Одноклассники"></a>
+						<a href="#" title="" target="_blank"><img src="../template/images/social/inst.gif" width="35" height="35" alt="Instagram"></a>
+						<a href="#" title="" target="_blank"><img src="../template/images/social/googleplus.gif" width="35" height="35" alt="Google Plus"></a>
+						<a href="#" title="" target="_blank"><img src="../template/images/social/play.gif" width="35" height="35" alt=""></a>
+						<a href="#" title="" target="_blank"><img src="../template/images/social/smile.gif" width="35" height="35" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer__bottom flexbox">
+			<div class="footer__copyright">
+				<p>
+					© 2017 CryoCream - <a href="/" title="">Криомороженное</a>
+				</p>
+			</div>
+			<div class="footer__kreotif text-right">
+				<p>Digital Agency Kreotif - <a href="http://kreotif.com" title="" target="_blank">Создание сайтов</a></p>				
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- =/footer -->
+
+
+<div id="outdated"></div>
+<link rel="stylesheet" property="stylesheet" href="/outdatedbrowser/outdatedbrowser.min.css" />
+<script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
+
+<script src="/template/js/libs.min.js"></script>
+
+<script src="/template/js/owl.carousel.min.js"></script>
+<link rel="stylesheet" property="stylesheet" href="../template/css/owl.carousel.css">
+<link rel="stylesheet" property="stylesheet" href="../template/css/jquery.fancybox.min.css">
+
+<script src="https://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script>window.jQuery || document.write('<script src="template/js/jquery.validate.min.js"><\/script>')</script>
+<script src="/template/js/engine.js"></script>
+</body>
+</html>
