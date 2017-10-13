@@ -68,6 +68,15 @@ input::-moz-focus-inner{
 	@include flexbox;
 }
 
+.space-between{
+	justify-content: space-between;
+}
+
+.flex-start{
+	justify-content: flex-start;
+}
+
+
 
 .outerwrapper{
 	-webkit-flex: 1;
@@ -77,7 +86,7 @@ input::-moz-focus-inner{
 /*** standart classes *****/
 p{margin: .5rem 0; line-height: 1.2}
 a{color:$color6}
-h1{font-size:2.4rem; @extend .bold;}
+h1{font-size:2.4rem; @extend .bold; text-align: center; text-transform: uppercase;}
 h2{font-size:2.2rem}
 h3{font-size:1.8rem}
 
@@ -223,7 +232,7 @@ input::-moz-focus-inner{
 		top: -.5%;
 		left: -.5%;
 		width: 101%;
-		height: 101%;
+		height: 10%;
 	}
 
 	&__photo, &__file {
@@ -440,8 +449,7 @@ header{
 ---------------------------*/
 
 .main{
-	aside{
-	}
+	margin-top: 2rem;
 }
 
 
@@ -568,6 +576,10 @@ footer{
 		}
 	}	
 }
+/* =/footer
+---------------------------*/
+
+
 
 
 .text-center{

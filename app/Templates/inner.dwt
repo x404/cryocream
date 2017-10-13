@@ -47,10 +47,10 @@
   <!-- =/video -->
 <!-- TemplateEndEditable -->
  
-  <!-- =nav -->
+	<!-- =nav -->
 	<nav id="navbar" class="nav">
 		<ul class="mainnav">
-			<li><a href="../homepage.html" title="">Главная</a></li>
+			<li><a href="#" title="">Главная</a></li>
 			<li class="folder">
 				<span>Продукция</span>
 				<div class="subnav">
@@ -63,7 +63,7 @@
 			</li>
 			<li><a href="#" title="">Услуги</a></li>
 			<li><a href="#" title="">О нас</a></li>
-			<li><a href="../partners.html" title="">Партнеры</a></li>
+			<li><a href="#" title="">Партнеры</a></li>
 			<li><a href="#" title="">Благотворительность</a></li>
 			<li><a href="#" title="">Фотогалерея</a></li>
 			<li><a href="#" title="">Контакты</a></li>
@@ -100,6 +100,12 @@
 	<!-- TemplateBeginEditable name="main" -->
 	
 	<!-- TemplateEndEditable -->
+	
+	<div class="share text-center">
+		<p>Поделитесь с друзьями <br> вашей любовью к путешествиям!</p>
+		<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,linkedin,lj,viber,whatsapp,skype,telegram"></div>
+		
+	</div>	
 </div>
 
 
@@ -110,14 +116,14 @@
 	<div class="container">
 		<div class="footer__menu">
 			<ul>
-				<li><a href="#" title="">Главная</a></li>
+				<li><a href="../homepage.html" title="">Главная</a></li>
 				<li class="active"><span>Продукция</span></li>
 				<li><a href="#" title="">Услуги</a></li>
 				<li><a href="#" title="">О нас</a></li>
-				<li><a href="#" title="">Партнеры</a></li>
+				<li><a href="../partners.html" title="">Партнеры</a></li>
 				<li><a href="#" title="">Благотворительность</a></li>
 				<li><a href="#" title="">Фотогалерея</a></li>
-				<!-- <li><a href="#" title="">Контакты</a></li> -->
+				 <li><a href="#" title="">Контакты</a></li> 
 				<li><a href="#" title="">Мероприятия</a></li>
 			</ul>
 		</div>
@@ -182,5 +188,8 @@
 <script src="https://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="template/js/jquery.validate.min.js"><\/script>')</script>
 <script src="/template/js/engine.js"></script>
+
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
 </body>
 </html>
