@@ -6,6 +6,40 @@
 	.main{
 		margin-top: 4.3rem;
 	}
+
+	.text{
+		color: $color9;
+	}
+
+	/* =events
+	---------------------------*/
+	.events{
+		.flexbox{
+			flex-wrap: wrap;
+
+		}
+		&__item{
+			margin: 2.8rem 0;
+			flex-basis: 33.3%;
+			a{
+				width: 350px;
+				overflow: hidden;
+				img{
+					@include transition-param(transform);
+				}
+				&:hover{
+					img{
+						transform: scale(1.05);
+					}
+				}
+			}
+		}
+		.text{
+			margin-bottom: -.5rem;
+		}
+	}
+	/* =/events
+	---------------------------*/
 }
 
 .share{
