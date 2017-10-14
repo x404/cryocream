@@ -282,6 +282,14 @@
 	}
 
 }
+
+.events{
+	&__link{
+		display: inline-block;
+		margin: 1rem 0 0;
+		@extend .tdu;
+	}
+}
 /* =/product
 ---------------------------*/
 

@@ -209,9 +209,9 @@ input::-moz-focus-inner {
   .tdn:hover, .nav > ul > li .subnav li a:hover, .feedback .vcard .email:hover {
     text-decoration: underline; }
 
-.tdu {
+.tdu, .events__link {
   text-decoration: underline; }
-  .tdu:hover {
+  .tdu:hover, .events__link:hover {
     text-decoration: none; }
 
 .block-center, .share, .product__item,
@@ -764,6 +764,10 @@ label.error {
 .events__title,
 .events__shorttext {
   padding: 0 20px; }
+
+.events__link {
+  display: inline-block;
+  margin: 1rem 0 0; }
 
 /* =/product
 ---------------------------*/
