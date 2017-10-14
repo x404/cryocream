@@ -191,10 +191,10 @@ input::-moz-focus-inner {
   font-family: 'CenturyGothicBold'; }
 
 .bold, h1, h3, .title, .footer__logo-title, .catalog__item-title, .product__title,
-.events__title, .feedback__form .submit {
+.events__title, .feedback__form .submit, .team header h2, .team__name {
   font-family: "SegoeUIBold"; }
 
-.italic, .inner main em, .feedback__form .row input.form-control, .feedback__form .row textarea, .policy {
+.italic, .feedback__form .row input.form-control, .feedback__form .row textarea, .policy, .inner main em {
   font-family: "SegoeUIItalic"; }
 
 .title {
@@ -204,9 +204,9 @@ input::-moz-focus-inner {
   margin: 1.2rem 0;
   text-transform: uppercase; }
 
-.tdn, .nav > ul > li .subnav li a, .feedback .vcard .email {
+.tdn, .nav > ul > li .subnav li a, .feedback .vcard .email, .team__name a {
   text-decoration: none; }
-  .tdn:hover, .nav > ul > li .subnav li a:hover, .feedback .vcard .email:hover {
+  .tdn:hover, .nav > ul > li .subnav li a:hover, .feedback .vcard .email:hover, .team__name a:hover {
     text-decoration: underline; }
 
 .tdu, .events__link {
@@ -214,14 +214,14 @@ input::-moz-focus-inner {
   .tdu:hover, .events__link:hover {
     text-decoration: none; }
 
-.block-center, .share, .product__item,
-.events__item, .feedback__form .submit {
+.block-center, .product__item,
+.events__item, .feedback__form .submit, .share {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-.before, .nav > ul > li .subnav:before, .inner main ul li:before, .catalog__item:before, .gallery__item a:after, .product__item a:after,
-.events__item a:after {
+.before, .nav > ul > li .subnav:before, .catalog__item:before, .gallery__item a:after, .product__item a:after,
+.events__item a:after, .inner main ul li:before {
   content: "";
   display: block;
   position: absolute; }
@@ -474,111 +474,6 @@ footer {
 
 label.error {
   display: none !important; }
-
-.inner {
-  /* =events
-	---------------------------*/
-  /* =/events
-	---------------------------*/
-  /* =gallery
-	---------------------------*/
-  /* =/gallery
-	---------------------------*/
-  /* =main
-	---------------------------*/
-  /* =/main
-	---------------------------*/
-  /* =gallery
-	---------------------------*/
-  /* =/gallery
-	---------------------------*/ }
-  .inner .logo {
-    left: 0;
-    margin-top: 8rem; }
-  .inner .main {
-    margin-top: 4.3rem; }
-  .inner .text {
-    color: #333; }
-  .inner .events .flexbox {
-    flex-wrap: wrap; }
-  .inner .events__item {
-    margin: 2.8rem 0;
-    flex-basis: 33.3%; }
-    .inner .events__item a {
-      width: 350px;
-      overflow: hidden; }
-      .inner .events__item a img {
-        -webkit-transition: transform 0.2s ease-out;
-        transition: transform 0.2s ease-out; }
-      .inner .events__item a:hover img {
-        transform: scale(1.05); }
-  .inner .events .text {
-    margin-bottom: -.5rem; }
-  .inner .gallery {
-    margin-top: 3rem; }
-    .inner .gallery__item {
-      flex-basis: 20%;
-      margin-bottom: 2.5rem; }
-    .inner .gallery__tab {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 4rem; }
-      .inner .gallery__tab li {
-        margin: 0 3rem; }
-      .inner .gallery__tab a {
-        text-decoration: none;
-        color: #808080;
-        -webkit-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out; }
-        .inner .gallery__tab a:hover {
-          color: #007abb;
-          border-bottom: 1px dashed #007abb; }
-      .inner .gallery__tab .active a, .inner .gallery__tab .active span {
-        color: #007abb;
-        border-bottom: 1px dashed #007abb; }
-  .inner main {
-    margin-bottom: 2.5rem; }
-    .inner main h2 {
-      font-size: 18px;
-      font-size: 1.8rem;
-      color: #007abb;
-      font-weight: normal;
-      margin: 2rem 0; }
-    .inner main em {
-      color: #000;
-      font-style: normal; }
-    .inner main table {
-      border-collapse: collapse; }
-      .inner main table td {
-        border: 1px solid #ccc;
-        padding: 8px; }
-    .inner main ul {
-      font-style: normal; }
-      .inner main ul li {
-        padding-left: 1.6rem;
-        position: relative;
-        margin: 1rem 0; }
-        .inner main ul li:before {
-          background: #007abb;
-          border-radius: 5px;
-          height: 5px;
-          width: 5px;
-          left: 0;
-          top: 8px; }
-    .inner main .youtube {
-      max-width: 100%; }
-
-.share {
-  font-size: 18px;
-  font-size: 1.8rem;
-  border-top: 1px solid #808080;
-  color: #808080;
-  font-family: "SegoeUIItalic";
-  margin-top: 2.5rem;
-  padding-top: 2.3rem;
-  width: 450px; }
-  .share p {
-    padding-bottom: 2rem; }
 
 /* =intro
 ---------------------------*/
@@ -993,6 +888,135 @@ input.submit:disabled {
 textarea {
   -webkit-transition: background 0.2s ease-out;
   transition: background 0.2s ease-out; }
+
+.inner {
+  /* =events
+	---------------------------*/
+  /* =/events
+	---------------------------*/
+  /* =gallery
+	---------------------------*/
+  /* =/gallery
+	---------------------------*/
+  /* =main
+	---------------------------*/
+  /* =/main
+	---------------------------*/
+  /* =gallery
+	---------------------------*/
+  /* =/gallery
+	---------------------------*/ }
+  .inner .logo {
+    left: 0;
+    margin-top: 8rem; }
+  .inner .main {
+    margin-top: 4.3rem; }
+  .inner .text {
+    color: #333; }
+  .inner .events .flexbox {
+    flex-wrap: wrap; }
+  .inner .events__item {
+    margin: 2.8rem 0;
+    flex-basis: 33.3%; }
+    .inner .events__item a {
+      width: 350px;
+      overflow: hidden; }
+      .inner .events__item a img {
+        -webkit-transition: transform 0.2s ease-out;
+        transition: transform 0.2s ease-out; }
+      .inner .events__item a:hover img {
+        transform: scale(1.05); }
+  .inner .events .text {
+    margin-bottom: -.5rem; }
+  .inner .gallery {
+    margin-top: 3rem; }
+    .inner .gallery__item {
+      flex-basis: 20%;
+      margin-bottom: 2.5rem; }
+    .inner .gallery__tab {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem; }
+      .inner .gallery__tab li {
+        margin: 0 3rem; }
+      .inner .gallery__tab a {
+        text-decoration: none;
+        color: #808080;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out; }
+        .inner .gallery__tab a:hover {
+          color: #007abb;
+          border-bottom: 1px dashed #007abb; }
+      .inner .gallery__tab .active a, .inner .gallery__tab .active span {
+        color: #007abb;
+        border-bottom: 1px dashed #007abb; }
+  .inner main {
+    margin-bottom: 2.5rem; }
+    .inner main h2 {
+      font-size: 18px;
+      font-size: 1.8rem;
+      color: #007abb;
+      font-weight: normal;
+      margin: 2rem 0; }
+    .inner main em {
+      color: #000;
+      font-style: normal; }
+    .inner main table {
+      border-collapse: collapse; }
+      .inner main table td {
+        border: 1px solid #ccc;
+        padding: 8px; }
+    .inner main ul {
+      font-style: normal; }
+      .inner main ul li {
+        padding-left: 1.6rem;
+        position: relative;
+        margin: 1rem 0; }
+        .inner main ul li:before {
+          background: #007abb;
+          border-radius: 5px;
+          height: 5px;
+          width: 5px;
+          left: 0;
+          top: 8px; }
+    .inner main .youtube {
+      max-width: 100%; }
+
+.share {
+  font-size: 18px;
+  font-size: 1.8rem;
+  border-top: 1px solid #808080;
+  color: #808080;
+  font-family: "SegoeUIItalic";
+  margin-top: 2.5rem;
+  padding-top: 2.3rem;
+  width: 450px; }
+  .share p {
+    padding-bottom: 2rem; }
+
+.team {
+  margin: 2.5rem 0 3.5rem; }
+  .team .flexbox {
+    flex-wrap: wrap; }
+  .team header {
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase; }
+    .team header h2 {
+      font-size: 24px;
+      font-size: 2.4rem; }
+  .team__item {
+    display: flex;
+    flex-basis: 33.3%;
+    margin-top: 3rem;
+    padding-right: 5rem; }
+  .team__cell {
+    color: #333;
+    padding-left: 2rem;
+    padding-top: 1.2rem; }
+  .team__name {
+    color: #087abb;
+    margin-bottom: .5rem; }
 
 /* =mobile-menu
 ---------------------------*/
