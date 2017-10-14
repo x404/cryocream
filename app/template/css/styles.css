@@ -994,6 +994,11 @@ textarea {
   .share p {
     padding-bottom: 2rem; }
 
+#infomodal {
+  color: #fff; }
+  #infomodal h1 {
+    color: #fff; }
+
 .team {
   margin: 2.5rem 0 3.5rem; }
   .team .flexbox {
@@ -1017,6 +1022,77 @@ textarea {
   .team__name {
     color: #087abb;
     margin-bottom: .5rem; }
+
+.modal-open {
+  overflow: hidden; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  overflow: hidden;
+  outline: 0; }
+  .modal.fade .modal-dialog {
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+    transform: translate(0, -25%); }
+  .modal.show .modal-dialog {
+    transform: translate(0, 0); }
+  .modal .container {
+    position: relative; }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 30px auto; }
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 122, 187, 0.85);
+  background-clip: padding-box;
+  outline: 0;
+  padding: 2rem 1rem; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1071;
+  background-color: #000; }
+  .modal-backdrop.fade {
+    opacity: 0; }
+  .modal-backdrop.show {
+    opacity: .5 !important; }
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto; }
+
+.close-modal {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999; }
+
+.fade {
+  opacity: 0;
+  transition: all opacity .15s linear; }
+  .fade.show {
+    opacity: 1; }
 
 /* =mobile-menu
 ---------------------------*/
