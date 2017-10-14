@@ -118,37 +118,40 @@
 ---------------------------*/
 
 
-.home{
-	&__gallery{
-		margin-top: 2.8rem;
-		.flexbox{
-			justify-content: space-between;
-			margin: 2rem 0 2.8rem;
-		}
-		&-item{
-			a{
-				display: block;
-				position: relative;
-				img{
-					vertical-align: top;
-				}
-				&:after{
-					@extend .before;
-					@include transition;
-					background:url(../images/zoom.png) no-repeat center center rgba(0, 122, 187, .55);
-					height: 100%;
-					left: 0;
-					opacity: 0;
-					top: 0;
-					transform: scale(.7);
-					width: 100%;
-				}
+.home,
+.inner{
+}
 
-				&:hover{
-					&:after{
-						transform: scale(1);
-						opacity: 1;
-					}
+.gallery{
+	margin-top: 2.8rem;
+	.flexbox{
+		justify-content: space-between;
+		margin: 2rem 0 2.8rem;
+		flex-wrap: wrap;
+	}
+	&__item{
+		a{
+			display: inline-block;
+			position: relative;
+			img{
+				vertical-align: top;
+			}
+			&:after{
+				@extend .before;
+				@include transition;
+				background:url(../images/zoom.png) no-repeat center center rgba(0, 122, 187, .55);
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				top: 0;
+				transform: scale(.7);
+				width: 100%;
+			}
+
+			&:hover{
+				&:after{
+					transform: scale(1);
+					opacity: 1;
 				}
 			}
 		}

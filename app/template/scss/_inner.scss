@@ -40,6 +40,72 @@
 	}
 	/* =/events
 	---------------------------*/
+
+
+	/* =gallery
+	---------------------------*/
+	.gallery{
+		margin-top: 3rem;
+		&__item{
+			flex-basis: 20%;
+			margin-bottom: 2.5rem;
+		}
+	}
+	/* =/gallery
+	---------------------------*/
+
+
+
+	/* =main
+	---------------------------*/
+	main{
+		margin-bottom: 2.5rem;
+		h2{
+			@include font-size(1.8);
+			color: $color6;
+			font-weight: normal;
+			margin: 2rem 0; 
+		}
+
+		em{
+			@extend .italic;
+			color: $color1;
+			font-style: normal;
+		}
+
+		table{
+			border-collapse: collapse;
+			td{
+				border: 1px solid $color5;
+				padding: 8px;
+			}
+		}
+
+		ul{
+			font-style: normal;
+			li{
+				padding-left: 1.6rem;
+				position: relative;
+				margin: 1rem 0;
+				&:before{
+					@extend .before;
+					background: $color6;
+					border-radius: 5px;
+					height: 5px;
+					width: 5px;
+					left: 0;
+					top: 8px;
+				}
+			}
+		}
+
+
+		.youtube{
+			max-width: 100%;
+		}
+	}
+	/* =/main
+	---------------------------*/
 }
 
 .share{
