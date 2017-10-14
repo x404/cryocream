@@ -128,7 +128,7 @@ input::-moz-focus-inner {
 /*** standart classes *****/
 p {
   margin: .5rem 0;
-  line-height: 1.2; }
+  line-height: normal; }
 
 a {
   color: #007abb; }
@@ -142,7 +142,7 @@ h2 {
   font-size: 2.2rem; }
 
 h3 {
-  font-size: 1.8rem; }
+  font-size: 1.4rem; }
 
 *:focus {
   outline: none; }
@@ -190,7 +190,7 @@ input::-moz-focus-inner {
 .cgb {
   font-family: 'CenturyGothicBold'; }
 
-.bold, h1, .title, .footer__logo-title, .catalog__item-title, .product__title,
+.bold, h1, h3, .title, .footer__logo-title, .catalog__item-title, .product__title,
 .events__title, .feedback__form .submit {
   font-family: "SegoeUIBold"; }
 
@@ -487,6 +487,10 @@ label.error {
   /* =main
 	---------------------------*/
   /* =/main
+	---------------------------*/
+  /* =gallery
+	---------------------------*/
+  /* =/gallery
 	---------------------------*/ }
   .inner .logo {
     left: 0;
@@ -515,6 +519,23 @@ label.error {
     .inner .gallery__item {
       flex-basis: 20%;
       margin-bottom: 2.5rem; }
+    .inner .gallery__tab {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem; }
+      .inner .gallery__tab li {
+        margin: 0 3rem; }
+      .inner .gallery__tab a {
+        text-decoration: none;
+        color: #808080;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out; }
+        .inner .gallery__tab a:hover {
+          color: #007abb;
+          border-bottom: 1px dashed #007abb; }
+      .inner .gallery__tab .active a, .inner .gallery__tab .active span {
+        color: #007abb;
+        border-bottom: 1px dashed #007abb; }
   .inner main {
     margin-bottom: 2.5rem; }
     .inner main h2 {
@@ -650,7 +671,6 @@ label.error {
 .gallery {
   margin-top: 2.8rem; }
   .gallery .flexbox {
-    justify-content: space-between;
     margin: 2rem 0 2.8rem;
     flex-wrap: wrap; }
   .gallery__item a {

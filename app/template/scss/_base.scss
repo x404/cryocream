@@ -88,11 +88,11 @@ input::-moz-focus-inner{
 }
 
 /*** standart classes *****/
-p{margin: .5rem 0; line-height: 1.2}
+p{margin: .5rem 0; line-height: normal;}
 a{color:$color6}
 h1{font-size:2.4rem; @extend .bold; text-align: center; text-transform: uppercase;}
 h2{font-size:2.2rem}
-h3{font-size:1.8rem}
+h3{font-size:1.4rem; @extend .bold;}
 
 
 *:focus{outline:none}

@@ -50,6 +50,31 @@
 			flex-basis: 20%;
 			margin-bottom: 2.5rem;
 		}
+		&__tab{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 4rem;
+			li{
+				margin: 0 3rem;
+			}
+			a{
+				text-decoration: none;
+				color: $color8;
+				@include transition;
+				&:hover{
+					$color: $color6;
+					color: $color;
+					border-bottom: 1px dashed $color;					
+				}
+			}
+			.active{
+				a, span{
+					$color: $color6;
+					color: $color;
+					border-bottom: 1px dashed $color;
+				}
+			}
+		}		
 	}
 	/* =/gallery
 	---------------------------*/
@@ -106,6 +131,14 @@
 	}
 	/* =/main
 	---------------------------*/
+
+	/* =gallery
+	---------------------------*/
+	.gallery{
+
+	}
+	/* =/gallery
+	---------------------------*/	
 }
 
 .share{
