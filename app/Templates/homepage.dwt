@@ -50,7 +50,7 @@
   <!-- =nav -->
 	<nav id="navbar" class="nav">
 		<ul class="mainnav">
-			<li><a href="../homepage.html" title="">Главная</a></li>
+			<li><a href="/" title="">Главная</a></li>
 			<li class="folder">
 				<span>Продукция</span>
 				<div class="subnav">
@@ -65,7 +65,7 @@
 			<li><a href="#" title="">О нас</a></li>
 			<li><a href="../partners.html" title="">Партнеры</a></li>
 			<li><a href="../charity.html" title="">Благотворительность</a></li>
-			<li><a href="#" title="">Фотогалерея</a></li>
+			<li><a href="../gallery.html" title="">Фотогалерея</a></li>
 			<li><a href="#" title="">Контакты</a></li>
 			<li class="show-event">
 				<a href="../events.html" title="">Мероприятия</a>
@@ -91,7 +91,7 @@
 	<!-- =header -->
 	<header>
 		<div class="logo container">
-			<img src="../template/images/logo.png" alt="CryoCream" />
+			<a href="/" title=""><img src="../template/images/logo.png" alt="CryoCream" /></a>
 		</div>
 	</header>
 	<!-- =/header -->
