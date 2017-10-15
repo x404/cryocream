@@ -52,7 +52,7 @@
 		<ul class="mainnav">
 			<li><a href="/" title="">Главная</a></li>
 			<li class="folder">
-				<span>Продукция</span>
+				<a href="../catalog.html" title="">Продукция</a>
 				<div class="subnav">
 					<ul>
 						<li><a href="#" title="">Мороженое</a></li>
@@ -62,11 +62,11 @@
 				</div>
 			</li>
 			<li><a href="#" title="">Услуги</a></li>
-			<li><a href="#" title="">О нас</a></li>
+			<li><a href="../about.html" title="">О нас</a></li>
 			<li><a href="../partners.html" title="">Партнеры</a></li>
 			<li><a href="../charity.html" title="">Благотворительность</a></li>
 			<li><a href="../gallery.html" title="">Фотогалерея</a></li>
-			<li><a href="#" title="">Контакты</a></li>
+			<li><a href="../contacts.html" title="">Контакты</a></li>
 			<li class="show-event">
 				<a href="../events.html" title="">Мероприятия</a>
 				<div class="subnav subnav-text">
