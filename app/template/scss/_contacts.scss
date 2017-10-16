@@ -1,0 +1,57 @@
+.inner{
+	.map{
+		margin-top: 7.7rem;
+		margin-bottom: 3rem;
+	}
+
+	.contacts{
+		h1{
+			color: $color6;
+		}
+	}
+
+	.feedback{
+		&-full{
+			width: 100%;
+			.feedback{
+				&__form{
+					width: 100%;
+					.row{
+						margin-bottom: .4rem;
+					}
+					.policy{
+						margin-top: 1.3rem;
+					}
+					input.form-control{
+						width: 32%;
+					}
+					.form-control{
+						border:1px solid $color11;
+						@include font-size(1.4);
+					}
+					.submit{
+						margin-top: 2.8rem;
+					}
+				}
+			}
+		}
+	}
+
+
+	.worktime{
+		border-top: 1px solid $color4;
+		color: $color9;
+		margin: 2.2rem 0 3.7rem;
+		text-align: center;
+		width: 450px;
+		@extend .block-center;
+		h2{
+			@include font-size(2.4);
+			@extend .bold;
+			color: $color7;
+			padding-top: 4rem;
+			margin-bottom: 1.4rem;
+			text-transform: uppercase;
+		}
+	}
+}

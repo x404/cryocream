@@ -194,7 +194,7 @@ input::-moz-focus-inner {
   font-family: 'CenturyGothicBold'; }
 
 .bold, h1, h3, .title, .footer__logo-title, .production__item-title, .product__title,
-.events__title, .feedback__form .submit, .catalog__item-title, .catalog_sub .catalog__item-title, .catalog_sub .catalog__item-desc .title, .team header h2, .team__name {
+.events__title, .feedback__form .submit, .catalog__item-title, .catalog_sub .catalog__item-title, .catalog_sub .catalog__item-desc .title, .team header h2, .team__name, .inner .worktime h2 {
   font-family: "SegoeUIBold"; }
 
 .italic, .feedback__form .row input.form-control, .feedback__form .row textarea, .policy, .inner main em {
@@ -218,7 +218,7 @@ input::-moz-focus-inner {
     text-decoration: none; }
 
 .block-center, .product__item,
-.events__item, .feedback__form .submit, .share, .catalog_sub .catalog__item-desc .title, .catalog_sub .catalog__item-desc hr {
+.events__item, .feedback__form .submit, .share, .catalog_sub .catalog__item-desc .title, .catalog_sub .catalog__item-desc hr, .inner .worktime {
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -975,6 +975,8 @@ textarea {
       .inner main table td {
         border: 1px solid #ccc;
         padding: 8px; }
+      .inner main table.table-noborder td {
+        border: none; }
     .inner main ul {
       font-style: normal; }
       .inner main ul li {
@@ -994,7 +996,7 @@ textarea {
 .share {
   font-size: 18px;
   font-size: 1.8rem;
-  border-top: 1px solid #808080;
+  border-top: 1px solid #d5d5d5;
   color: #808080;
   font-family: "SegoeUIItalic";
   margin-top: 2.5rem;
@@ -1126,6 +1128,44 @@ textarea {
   .team__name {
     color: #087abb;
     margin-bottom: .5rem; }
+
+.inner .map {
+  margin-top: 7.7rem;
+  margin-bottom: 3rem; }
+
+.inner .contacts h1 {
+  color: #007abb; }
+
+.inner .feedback-full {
+  width: 100%; }
+  .inner .feedback-full .feedback__form {
+    width: 100%; }
+    .inner .feedback-full .feedback__form .row {
+      margin-bottom: .4rem; }
+    .inner .feedback-full .feedback__form .policy {
+      margin-top: 1.3rem; }
+    .inner .feedback-full .feedback__form input.form-control {
+      width: 32%; }
+    .inner .feedback-full .feedback__form .form-control {
+      border: 1px solid #218ee0;
+      font-size: 14px;
+      font-size: 1.4rem; }
+    .inner .feedback-full .feedback__form .submit {
+      margin-top: 2.8rem; }
+
+.inner .worktime {
+  border-top: 1px solid #d5d5d5;
+  color: #333;
+  margin: 2.2rem 0 3.7rem;
+  text-align: center;
+  width: 450px; }
+  .inner .worktime h2 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    color: #0563bf;
+    padding-top: 4rem;
+    margin-bottom: 1.4rem;
+    text-transform: uppercase; }
 
 .modal-open {
   overflow: hidden; }

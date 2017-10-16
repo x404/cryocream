@@ -105,6 +105,11 @@
 				border: 1px solid $color5;
 				padding: 8px;
 			}
+			&.table-noborder{
+				td{
+					border: none;
+				}
+			}
 		}
 
 		ul{
@@ -145,7 +150,7 @@
 .share{
 	@extend .block-center;
 	@include font-size(1.8);
-	border-top: 1px solid $color8;
+	border-top: 1px solid $color4;
 	color: $color8;
 	font-family: "SegoeUIItalic";
 	margin-top: 2.5rem;
