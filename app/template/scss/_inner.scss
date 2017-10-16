@@ -9,6 +9,9 @@
 
 	.text{
 		color: $color9;
+		a{
+			@extend .tdn;
+		}
 	}
 
 	/* =events

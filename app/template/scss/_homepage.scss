@@ -457,7 +457,7 @@
 	color: $color8;
 	a{
 		color: $color7;
-		text-decoration: none;
+		@extend .tdn;
 	}
 }
 /* =/policy

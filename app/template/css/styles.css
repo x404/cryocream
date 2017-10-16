@@ -207,9 +207,9 @@ input::-moz-focus-inner {
   margin: 1.2rem 0;
   text-transform: uppercase; }
 
-.tdn, .nav > ul > li .subnav li a, .feedback .vcard .email, .team__name a {
+.tdn, .nav > ul > li .subnav li a, .feedback .vcard .email, .policy a, .inner .text a, .team__name a {
   text-decoration: none; }
-  .tdn:hover, .nav > ul > li .subnav li a:hover, .feedback .vcard .email:hover, .team__name a:hover {
+  .tdn:hover, .nav > ul > li .subnav li a:hover, .feedback .vcard .email:hover, .policy a:hover, .inner .text a:hover, .team__name a:hover {
     text-decoration: underline; }
 
 .tdu, .events__link {
@@ -838,8 +838,7 @@ label.error {
 .policy {
   color: #808080; }
   .policy a {
-    color: #0563bf;
-    text-decoration: none; }
+    color: #0563bf; }
 
 /* =/policy
 ---------------------------*/
@@ -1156,7 +1155,7 @@ textarea {
 .inner .worktime {
   border-top: 1px solid #d5d5d5;
   color: #333;
-  margin: 2.2rem 0 3.7rem;
+  margin: 2.2rem auto 3.7rem;
   text-align: center;
   width: 450px; }
   .inner .worktime h2 {
