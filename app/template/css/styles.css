@@ -916,20 +916,26 @@ textarea {
     margin-top: 4.3rem; }
   .inner .text {
     color: #333; }
-  .inner .events .flexbox {
+  .inner .events .flexbox,
+  .inner .product .flexbox {
     flex-wrap: wrap; }
-  .inner .events__item {
+  .inner .events__item,
+  .inner .product__item {
     margin: 2.8rem 0;
     flex-basis: 33.3%; }
-    .inner .events__item a {
+    .inner .events__item a,
+    .inner .product__item a {
       width: 350px;
       overflow: hidden; }
-      .inner .events__item a img {
+      .inner .events__item a img,
+      .inner .product__item a img {
         -webkit-transition: transform 0.2s ease-out;
         transition: transform 0.2s ease-out; }
-      .inner .events__item a:hover img {
+      .inner .events__item a:hover img,
+      .inner .product__item a:hover img {
         transform: scale(1.05); }
-  .inner .events .text {
+  .inner .events .text,
+  .inner .product .text {
     margin-bottom: -.5rem; }
   .inner .gallery {
     margin-top: 3rem; }
