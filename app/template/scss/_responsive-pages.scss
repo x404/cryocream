@@ -21,6 +21,26 @@
 	}
 }
 
+@media (max-width: 1400px){
+	.services{
+		&__item{
+			.owl{
+				$x: -30px;
+				&-nav{
+					top: 58px;
+				}
+				&-prev{
+					left: $x;
+				}
+				&-next{
+					right: $x;
+				}
+			}
+		}
+	}	
+}
+
+
 @media (max-width: 1300px){
 	.product{
 		$x: 0;
@@ -141,6 +161,38 @@
 	.footer{
 		&__menu{
 			display: none;
+		}
+	}
+}
+
+@media (max-width: 650px){
+	.services{
+		&__item{
+			.owl{
+				$x: -10px;
+				&-nav{
+					top: 58px;
+				}
+				&-prev{
+					left: $x;
+				}
+				&-next{
+					right: $x;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 550px){
+	.services{
+		&__item{
+			.owl{
+				&-nav{
+					display: none;
+				}
+			}
 		}
 	}
 }
