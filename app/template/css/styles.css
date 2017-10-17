@@ -1469,6 +1469,15 @@ textarea {
 ::-ms-clear {
   display: none; }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body {
+    display: block;
+    height: auto; } }
+
+.ie10 .production__item-title {
+  display: block;
+  padding-top: 7.5rem; }
+
 @media (max-width: 1260px) {
   header .logo {
     left: 0; }

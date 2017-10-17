@@ -15,4 +15,16 @@ _::-webkit-:host:not(:root:root), .header{
 
 //ie11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body{
+		display: block;
+		height: auto;
+	}
+}
+
+
+.ie10{
+	.production__item-title{
+		display: block;
+		padding-top: 7.5rem;
+	}
 }
