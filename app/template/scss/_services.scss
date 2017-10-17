@@ -21,7 +21,7 @@
 				background-color: rgba(0, 122, 187, .8);
 			}
 		}
-		*{
+		& > *:not(div){
 			position: relative;
 			z-index: 2;
 		}
@@ -33,14 +33,34 @@
 			margin-bottom: 1rem;
 		}
 
-		.owl-carousel{
-			margin-top: 4.5rem;
-			width: 995px;
-			margin-left: auto;
-			margin-right: auto;
+		.owl{
+			&-carousel{
+				margin-top: 4.5rem;
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			&-item{
+				text-align: center;
+			}
+
+			$x: -50px;
+			&-nav{
+				top: 58px;
+			}
+			&-prev{
+				left: $x;
+			}
+			&-next{
+				right: $x;
+			}
+		}
+
 
 			.goody{
 				&__item{
+					display: inline-block;
 					$s: 178px;
 					&-link{
 						display: block;
@@ -95,6 +115,5 @@
 					}
 				}
 			}			
-		}
 	}
 }

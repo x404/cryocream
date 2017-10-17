@@ -118,6 +118,7 @@
 					
 					<p>Пожалуй, это химическое шоу – одно из самых любимых у наших подрастающих зрителей. Ведь здесь можно не просто поучаствовать в процессе эксперимента, но и попробовать его результат на вкус. Итак, что же ждет тех, кто будет наблюдать за профессором и помогать ему сделать очередной химический кулинарный шедевр?</p>
 
+					<!-- =carousel -->
 					<div class="owl-carousel" id="service-1">
 						<div class="goody__item">
 							<a href="#" title="" class="goody__item-link">
@@ -164,48 +165,46 @@
 					</div>
 					<script>
 						$(document).ready(function(){
-	$('#service-1').owlCarousel({
-		loop:false,
-		nav:true,
-		dots: false,
-		items:5,
-		navText: ["", ""],
-		responsive:{
-			0:{
-				items:1,
-				stagePadding: 20
-			},
-			350:{
-				items:1,
-				stagePadding: 30
-			},
-			400:{
-				items:1,
-				stagePadding: 55
-			},
-			470:{
-				items:1,
-				stagePadding: 90
-			},
-			550:{
-				items:1,
-				stagePadding: 120
-			},			
-			700:{
-				items:1,
-				stagePadding: 150
-			},
-			900:{
-				items:2,
-			},
-			1550:{
-				items:5
-			}
-		}
-	});
-
+							$('#service-1').owlCarousel({
+								loop:false,
+								nav:true,
+								dots: false,
+								items:5,
+								navText: ["", ""],
+								responsive:{
+									0:{
+										items:1,
+										stagePadding: 20
+									},
+									370:{
+										items:1,
+										stagePadding: 50
+									},
+									420:{
+										items:1,
+										stagePadding: 70
+									},
+									470:{
+										items:1,
+										stagePadding: 100
+									},
+									550:{
+										items:2
+									},
+									800:{
+										items:3
+									},			
+									1000:{
+										items: 4
+									},
+									1400:{
+										items:5
+									}
+								}
+							});
 						})
 					</script>
+					<!-- =/carousel -->
 				</div>
 
 				<div class="services__item" style="background-image: url(images/catalog-cream.jpg);">
@@ -213,12 +212,186 @@
 					<p>Замороженный сладкий продукт из молока, сливок, масла, сахара, соков, ягод и прочих продуктов с добавлением вкусовых и ароматических веществ. Существуют различные сорта мороженого, например крем-брюле или пломбир.</p>
 					<p>До появления современных способов замораживания мороженое было роскошным лакомством только для особых случаев. Производство мороженого было довольно сложным.</p>
 					<p>В домашних условиях мороженое можно получить при помощи специального аппарата - мороженицы. Для промышленных объёмов производства используются автоматические фризеры (от 1 до 15 кг в час). Возможности производства бо́льших объёмов доступны на хладокомбинатах.</p>
+					<!-- =carousel -->
+					<div class="owl-carousel" id="service-2">
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/vanilla.png" alt="Vanilla" width="178" height="178" />
+								<p class="goody__item-title">Vanilla</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/caramel.png" alt="Salted Caramel" width="178" height="178" />
+								<p class="goody__item-title">Salted Caramel</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/magic.png" alt="Black Magic" width="178" height="178" />
+								<p class="goody__item-title">Black Magic</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/cinnnamon.png" alt="Sweet Cinnamon" width="178" height="178" />
+								<p class="goody__item-title">Sweet Cinnamon</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/truffle.png" alt="chocolate truffle" width="178" height="178" />
+								<p class="goody__item-title">chocolate  truffle</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/magic.png" alt="Black Magic" width="178" height="178" />
+								<p class="goody__item-title">Black Magic</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/cinnnamon.png" alt="Sweet Cinnamon" width="178" height="178" />
+								<p class="goody__item-title">Sweet Cinnamon</p>
+							</a>
+						</div>						
+					</div>
+					<script>
+						$(document).ready(function(){
+							$('#service-2').owlCarousel({
+								loop:false,
+								nav:true,
+								dots: false,
+								items:5,
+								navText: ["", ""],
+								responsive:{
+									0:{
+										items:1,
+										stagePadding: 20
+									},
+									370:{
+										items:1,
+										stagePadding: 50
+									},
+									420:{
+										items:1,
+										stagePadding: 70
+									},
+									470:{
+										items:1,
+										stagePadding: 100
+									},
+									550:{
+										items:2
+									},
+									800:{
+										items:3
+									},			
+									1000:{
+										items: 4
+									},
+									1400:{
+										items:5
+									}
+								}
+							});
+						})
+					</script>
+					<!-- =/carousel -->
 				</div>
 				<div class="services__item" style="background-image: url(images/catalog-cryocockteil.jpg);">
 					<h2 class="services__item-title">Крио коктейль</h2>
 					<p>Ну вот и настала пора анонсировать наши Новинки! Представляем вашему вниманию Крио Напитки. Этим мы точно сможем вас удивить!</p>
 					<p>Вкусные коктейли приготовленные при помощи жидкого Азота прям на ваших глазах будут превращаться в нежный сорбет, а сливки в настоящее мороженное. Процесс приготовления коктейля сопровождается густым дымом, что вызывает еще больший интерес у посетителей мероприятия.</p>
 					<p>Такой коктейль абсолютно безопасен для здоровья, так как при заморозке азот моментально испаряется, не изменяя вкус и цвет коктейля.</p>
+					<!-- =carousel -->
+					<div class="owl-carousel" id="service-3">
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/vanilla.png" alt="Vanilla" width="178" height="178" />
+								<p class="goody__item-title">Vanilla</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/caramel.png" alt="Salted Caramel" width="178" height="178" />
+								<p class="goody__item-title">Salted Caramel</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/magic.png" alt="Black Magic" width="178" height="178" />
+								<p class="goody__item-title">Black Magic</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/cinnnamon.png" alt="Sweet Cinnamon" width="178" height="178" />
+								<p class="goody__item-title">Sweet Cinnamon</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/truffle.png" alt="chocolate truffle" width="178" height="178" />
+								<p class="goody__item-title">chocolate  truffle</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/magic.png" alt="Black Magic" width="178" height="178" />
+								<p class="goody__item-title">Black Magic</p>
+							</a>
+						</div>
+						<div class="goody__item">
+							<a href="#" title="" class="goody__item-link">
+								<img src="tmp/cinnnamon.png" alt="Sweet Cinnamon" width="178" height="178" />
+								<p class="goody__item-title">Sweet Cinnamon</p>
+							</a>
+						</div>						
+					</div>
+					<script>
+						$(document).ready(function(){
+							$('#service-3').owlCarousel({
+								loop:false,
+								nav:true,
+								dots: false,
+								items:5,
+								navText: ["", ""],
+								responsive:{
+									0:{
+										items:1,
+										stagePadding: 20
+									},
+									370:{
+										items:1,
+										stagePadding: 50
+									},
+									420:{
+										items:1,
+										stagePadding: 70
+									},
+									470:{
+										items:1,
+										stagePadding: 100
+									},
+									550:{
+										items:2
+									},
+									800:{
+										items:3
+									},			
+									1000:{
+										items: 4
+									},
+									1400:{
+										items:5
+									}
+								}
+							});
+						})
+					</script>
+					<!-- =/carousel -->
 				</div>
 			</section>
 		</div>

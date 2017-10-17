@@ -66,13 +66,20 @@
 }
 
 @media (max-width: 620px){
-	.footer__bottom{
-		display: block;
-		text-align: center;
-		p{
-			margin: 1.2rem 0;
+	.footer{
+		&__bottom{
+			display: block;
+			text-align: center;
+			p{
+				margin: 1.2rem 0;
+			}
+		}
+		&__kreotif{
+			text-align: center !important;
 		}
 	}
+
+
 }
 
 @media (max-width: 530px){
