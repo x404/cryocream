@@ -36,7 +36,7 @@ gulp.task('scss', function(){
 
 // сжатие css файла
 gulp.task('css-libs', ['scss'],  function(){
-	return gulp.src([config.destDir + '/css/styles.css', config.libsDir + '/fancybox/dist/jquery.fancybox.css']) // Выбираем файл для минификации
+	return gulp.src([config.destDir + '/css/styles.css', config.libsDir + '/fancybox/dist/jquery.fancybox.css', config.destDir + '/css/owl.carousel.css']) // Выбираем файл для минификации
 		.pipe(cleancss())  // Сжимаем
 		.pipe(rename({suffix: '.min'}))  // Добавляем суффикс .min
 		.pipe(gulp.dest(config.destDir + '/css')) // Выгружаем в папку app/css
@@ -214,11 +214,12 @@ gulp.task('check-for-favicon-update', function(done) {
 });
 
 
-gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
+gulp.task('build', ['clean', 'img', 'css-libs', 'compress'], function(){
 	// переносим css файлы
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
 		'app/template/css/styles.min.css',
-		'app/template/css/owl.carousel.css'
+		'app/template/css/owl.carousel.min.css',
+		'app/template/css/jquery.fancybox.min.css'
 	])
 	.pipe(gulp.dest('dist/template/css'));
 
@@ -230,6 +231,7 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	var buildTmp = gulp.src('app/tmp/*').pipe(gulp.dest('dist/tmp'));
 	var buildFonts = gulp.src(config.sourceDir + '/fonts/**/*').pipe(gulp.dest('dist/template/fonts')); // Переносим шрифты в продакшен
 	var buildOutdate = gulp.src('app/outdatedbrowser/**/*').pipe(gulp.dest('dist/outdatedbrowser'));
+	var buildIMG = gulp.src('app/images/**/*').pipe(gulp.dest('dist/images'));
 
 });
 
