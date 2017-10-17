@@ -90,7 +90,7 @@ $(document).ready(function(){
 		},		
 		onTranslated: function (event) {
 			refreshMiddle('foo1');
-			console.log(event);
+			// console.log(event);
 		}
 	});
 
@@ -278,7 +278,7 @@ function startClock(sendform){
 
 
 function refreshMiddle(id){
-	console.log(id);
+	// console.log(id);
 	$('#' + id + ' .owl-item').removeClass('big');
 
 	$('#' + id + ' .owl-stage .owl-item.active').each(function(index){
@@ -292,7 +292,7 @@ function refreshMiddle(id){
 // показываем второй  уровень меню
 $(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(e){
 	e.preventDefault();
-	let $this = $(this);
+	var $this = $(this);
 	$this.next('.subnav').slideToggle().prev().toggleClass('open');
 })
 
