@@ -20,6 +20,18 @@
 		}
 	}
 }
+@media (max-width: 1450px){
+	.product__carousel{
+		.owl-item{
+			.product__item{
+				a{
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
 
 @media (max-width: 1400px){
 	.services{
@@ -71,6 +83,23 @@
 }
 
 
+@media (max-width: 1199px){
+	.gallery{
+		&__item{
+			flex-basis: 19%;
+			margin-right: 1%;
+			&:last-child{
+				margin-right: 0;
+			}
+			a{
+				img{
+				}
+			}
+		}
+	}
+}
+
+
 @media (max-width: 1070px){
 	$x: -40px;
 	.product{
@@ -90,6 +119,17 @@
 }
 
 
+@media (max-width: 1024px){
+	.production{
+		.flexbox{
+			justify-content: center;
+		}
+		&__item{
+			flex-basis: 33.3%;
+		}
+	}
+}
+
 @media (max-width: 991px){
 	.product{
 		$x: 70px;
@@ -103,6 +143,16 @@
 					right: $x;
 				}
 			}
+		}
+	}
+
+	.production{
+		.flexbox{
+			justify-content: center;
+		}
+		&__item{
+			margin-left: 1.5rem;
+			margin-right: 1.5rem;
 		}
 	}
 }
@@ -140,6 +190,19 @@
 }
 
 @media (max-width: 775px){
+	.gallery{
+		.flexbox{
+			justify-content: center;
+		}
+		&__item{
+			flex-basis: 50%;
+			margin-bottom: 2rem;
+			margin-right: 0;
+			text-align: center;
+		}
+	}
+
+
 	.feedback__form{
 		width: 100%;
 		.policy{
@@ -225,6 +288,16 @@
 }
 
 
+@media (max-width: 475px){
+	.gallery{
+		&__item{
+			flex-basis: 100%;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+
 @media (max-width: 460px){
 	.product{
 		$w: 240px;
@@ -237,5 +310,11 @@
 			padding-left: 5px;
 			padding-right: 5px;
 		}
+	}
+}
+
+@media (max-width: 450px){
+	.intro{
+		margin-top: 5.5rem;
 	}
 }

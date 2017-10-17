@@ -129,7 +129,7 @@ $(document).ready(function(){
 			991:{
 				items:2
 			},
-			1550:{
+			1450:{
 				items:3
 			}
 		},
