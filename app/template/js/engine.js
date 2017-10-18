@@ -56,19 +56,19 @@ $(document).ready(function(){
 		responsive:{
 			0:{
 				items:1,
-				stagePadding: 20
+				stagePadding: 25
 			},
 			350:{
 				items:1,
-				stagePadding: 30
+				stagePadding: 40
 			},
 			400:{
 				items:1,
-				stagePadding: 55
+				stagePadding: 80
 			},
 			470:{
 				items:1,
-				stagePadding: 90
+				stagePadding: 100
 			},
 			550:{
 				items:1,
@@ -104,11 +104,11 @@ $(document).ready(function(){
 		responsive:{
 			0:{
 				items:1,
-				stagePadding: 14
+				stagePadding: 15
 			},
 			335:{
 				items:1,
-				stagePadding: 20
+				stagePadding: 30
 			},
 			380:{
 				items:1,
