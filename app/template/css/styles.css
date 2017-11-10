@@ -263,7 +263,7 @@ input::-moz-focus-inner {
     top: -.5%;
     left: -.5%;
     width: 101%;
-    height: 10%; }
+    height: 100%; }
   .video__photo, .video__file {
     position: absolute;
     min-width: 100%;
@@ -1544,6 +1544,10 @@ textarea {
     .footer__item:last-child {
       width: 50%; } }
 
+@media (max-width: 767px) {
+  .inner .main {
+    margin-top: 2.5rem; } }
+
 @media (max-width: 650px) {
   .video__content {
     width: 100%;
@@ -1566,8 +1570,6 @@ textarea {
 @media (max-width: 530px) {
   header .logo {
     margin-top: 8.5rem; }
-  .video {
-    margin-bottom: 5rem; }
   .footer__content .flexbox {
     display: block; }
   .footer__item {
@@ -1624,10 +1626,10 @@ textarea {
     right: -50px; } }
 
 @media (max-width: 1199px) {
-  .gallery__item {
+  .inner .gallery__item {
     flex-basis: 19%;
     margin-right: 1%; }
-    .gallery__item:last-child {
+    .inner .gallery__item:last-child {
       margin-right: 0; }
   .catalog_sub .flexbox {
     width: 100%; }
@@ -1765,6 +1767,8 @@ textarea {
       margin-left: auto;
       margin-right: auto;
       width: 80%; }
+  .inner .gallery__item {
+    flex-basis: 49%; }
   .services__item .owl-nav {
     top: 58px; }
   .services__item .owl-prev {
@@ -1833,7 +1837,10 @@ textarea {
 
 @media (max-width: 450px) {
   .intro {
-    margin-top: 5.5rem; } }
+    margin-top: 5.5rem; }
+  .inner .gallery__item {
+    flex-basis: 100%;
+    margin-right: 0; } }
 
 @media (max-width: 400px) {
   .product__textbox {

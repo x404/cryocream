@@ -84,12 +84,20 @@
 
 
 @media (max-width: 1199px){
-	.gallery{
+	.inner .gallery{
 		&__item{
 			flex-basis: 19%;
 			margin-right: 1%;
 			&:last-child{
 				margin-right: 0;
+			}
+		}
+	}
+
+	.inner{
+		.gallery{
+			&__item{
+				// margin-right: 0;
 			}
 		}
 	}
@@ -341,6 +349,14 @@
 	}
 
 
+	.inner{
+		.gallery{
+			&__item{
+				flex-basis: 49%;
+			}
+		}
+	}
+
 	.services{
 		&__item{
 			.owl{
@@ -475,6 +491,15 @@
 @media (max-width: 450px){
 	.intro{
 		margin-top: 5.5rem;
+	}
+
+	.inner{
+		.gallery{
+			&__item{
+				flex-basis: 100%;
+				margin-right: 0;
+			}
+		}
 	}
 }
 

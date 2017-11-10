@@ -253,7 +253,7 @@ input::-moz-focus-inner {
     top: -.5%;
     left: -.5%;
     width: 101%;
-    height: 10%; }
+    height: 100%; }
   .video__photo, .video__file {
     position: absolute;
     min-width: 100%;
