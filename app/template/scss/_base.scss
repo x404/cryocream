@@ -47,6 +47,10 @@ body{
 	font-display: swap;
 	font-family: "SegoeUIRegular", Arial;
 	height: 100vh;
+	&.scroll-no{
+		// position: fixed;
+		overflow: hidden;
+	}
 }
 
 html, body{

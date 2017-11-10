@@ -1,3 +1,5 @@
+var ESC_KEY = 27;
+
 $(document).ready(function(){
 
 	var video = $('#video');
@@ -195,7 +197,53 @@ $(document).ready(function(){
 	}); 
 
 
-	$("[data-fancybox]").fancybox();	
+	$("[data-fancybox]").fancybox();
+
+
+	$('#infomodal').on('show.bs.modal', function (e) {
+		var $this = $(e.relatedTarget),
+			id = $this.data('id'),
+			title = $this.data('title'),
+			url = id,
+			posting = $.post(id);
+
+		$.ajax('/' + url, 'POST').then(function(data) {
+			$('#infomodal .title').text(title);
+			$('#infomodal .modal__text').html(data);
+		});
+	});
+
+	$('[data-toggle="teammodal"]').click(function(e){
+		e.preventDefault();
+		var $this = $(this),
+			target = $this.data('target'),
+			id = $this.data('id'),
+			title = $this.data('title'),
+			url = id;
+
+
+		$.ajax('/' + url, 'POST').then(function(data) {
+			$('#infomodal .title').text(title);
+			$('#infomodal .modal__text').html(data);
+			$('#infomodal').fadeIn();
+			if ($(window).width() <= 650){
+				$('body').addClass('scroll-no');				
+			}
+			addKeyPressHandler(target);
+		});
+
+		console.log(title);
+	});
+
+
+	$('#infomodal .close').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+		$('#infomodal').fadeOut('normal', function(){	
+			$('body').removeClass('scroll-no');		
+		});
+	});
+
 });
 
 // =заглушка для IE
@@ -223,6 +271,18 @@ addLoadEvent(function(){
 	})
 });
 // =/заглушка для IE
+
+
+function addKeyPressHandler(modal){
+	'use strict';
+	document.body.addEventListener("keyup", function(event){
+		event.preventDefault();
+		if (event.keyCode === ESC_KEY){
+			$(modal).find('.close').trigger('click');
+		}
+	});
+};
+
 
 
 

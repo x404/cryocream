@@ -1,5 +1,7 @@
 .team{
 	margin: 2.5rem 0 3.5rem;
+	position: relative;
+
 	.flexbox{
 		flex-wrap: wrap;
 	}
@@ -34,5 +36,17 @@
 		a{
 			@extend .tdn;
 		}
+	}
+
+	.infomodal{
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 30px;
+		&.show{
+			display: block;
+		}		
 	}
 }

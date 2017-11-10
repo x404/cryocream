@@ -95,6 +95,8 @@ body {
   font-display: swap;
   font-family: "SegoeUIRegular", Arial;
   height: 100vh; }
+  body.scroll-no {
+    overflow: hidden; }
 
 html, body {
   height: 100%; }
@@ -1124,7 +1126,8 @@ textarea {
       margin: 1.8rem auto; }
 
 .team {
-  margin: 2.5rem 0 3.5rem; }
+  margin: 2.5rem 0 3.5rem;
+  position: relative; }
   .team .flexbox {
     flex-wrap: wrap; }
   .team header {
@@ -1145,6 +1148,15 @@ textarea {
   .team__name {
     color: #087abb;
     margin-bottom: .5rem; }
+  .team .infomodal {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 30px; }
+    .team .infomodal.show {
+      display: block; }
 
 .inner .map {
   margin-top: 7.7rem;
@@ -1325,7 +1337,8 @@ textarea {
   position: relative;
   flex: 1 1 auto; }
 
-.close-modal {
+.close-modal,
+.close {
   position: absolute;
   right: 5px;
   top: 5px;
@@ -1333,6 +1346,26 @@ textarea {
   border: none;
   cursor: pointer;
   z-index: 999; }
+
+.infomodal .modal-dialog {
+  background: rgba(0, 122, 187, 0.8);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  margin-top: 40px;
+  padding: 2rem 1rem 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%; }
+
+.infomodal .close {
+  background: url(../images/close-modal.png) no-repeat left top;
+  height: 28px;
+  width: 27px; }
+
+.infomodal .modal__content .title {
+  text-align: center; }
 
 .fade {
   opacity: 0;
@@ -1637,7 +1670,9 @@ textarea {
     width: 33%;
     margin: 1px; }
     .catalog_sub .catalog__item img {
-      max-width: 100%; } }
+      max-width: 100%; }
+  .team__item {
+    padding-right: 2rem; } }
 
 @media (max-width: 1070px) {
   .product__carousel {
@@ -1669,7 +1704,9 @@ textarea {
     font-size: 20px;
     font-size: 2rem; }
   .catalog_sub .catalog__item-desc p:not(.title) {
-    line-height: 1.3; } }
+    line-height: 1.3; }
+  .team__item {
+    flex-basis: 50%; } }
 
 @media (max-width: 920px) {
   .feedback {
@@ -1743,7 +1780,11 @@ textarea {
   .user-access:checked + label:before {
     border-color: #d5d5d5; }
   .share {
-    color: #808080; } }
+    color: #808080; }
+  .team__name a {
+    color: #000; }
+  .infomodal .title {
+    color: #fff; } }
 
 @media (max-width: 750px) {
   .footer__menu {
@@ -1791,7 +1832,29 @@ textarea {
   .gallery {
     margin-top: 0; }
     .gallery .flexbox {
-      margin-top: 0; } }
+      margin-top: 0; }
+  .team__item {
+    display: block;
+    flex-basis: 100%;
+    margin-top: 4rem;
+    padding-right: 0;
+    text-align: center; }
+  .team__cell {
+    padding-top: .5rem;
+    padding-left: 0;
+    width: 100%; }
+  .team .infomodal {
+    bottom: 0;
+    position: fixed;
+    z-index: 9999; }
+    .team .infomodal .modal-dialog {
+      overflow: auto;
+      margin: 0;
+      position: static; }
+    .team .infomodal .close {
+      right: 20px; }
+    .team .infomodal .modal__text {
+      text-align: justify; } }
 
 @media (max-width: 550px) {
   .services__item .owl-nav {

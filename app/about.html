@@ -127,7 +127,9 @@
 					<div class="team__item">
 						<div class="team__pic"><img src="images/team/people-1.png" alt="Роман" /></div>
 						<div class="team__cell">
-							<div class="team__name"><a href="#" title="" data-toggle="modal" data-title="Роман" data-target="#infomodal" data-id="1.php">Роман</a></div>
+							<div class="team__name">
+								<a href="#" title="" data-toggle="teammodal" data-title="Роман" data-target="#infomodal" data-id="1.php">Роман</a>
+							</div>
 							<div class="team__appointment">Руководитель проекта</div>
 							<div class="team__text">Руководитель проекта</div>
 						</div>
@@ -135,7 +137,7 @@
 					<div class="team__item">
 						<div class="team__pic"><img src="images/team/people-2.png" alt="Максим" /></div>
 						<div class="team__cell">
-							<div class="team__name"><a href="#" title="" data-toggle="modal" data-title="Максим" data-target="#infomodal" data-id="1.php">Максим</a></div>
+							<div class="team__name"><a href="#" title="" data-toggle="teammodal" data-title="Максим" data-target="#infomodal" data-id="2.php">Максим</a></div>
 							<div class="team__appointment">Шеф-повар</div>
 							<div class="team__text">Кондитер. Карвинг.</div>
 						</div>
@@ -143,7 +145,7 @@
 					<div class="team__item">
 						<div class="team__pic"><img src="images/team/people-3.png" alt="Алиса" /></div>
 						<div class="team__cell">
-							<div class="team__name"><a href="#" title="" data-toggle="modal" data-title="Алиса" data-target="#infomodal" data-id="1.php">Алиса</a></div>
+							<div class="team__name"><a href="#" title="" data-toggle="teammodal" data-title="Алиса" data-target="#infomodal" data-id="1.php">Алиса</a></div>
 							<div class="team__appointment">Оформитель</div>
 							<div class="team__text">оформитель, детский аниматор, проведение и организация мастер-классов</div>
 						</div>
@@ -151,17 +153,30 @@
 					<div class="team__item">
 						<div class="team__pic"><img src="images/team/people-4.png" alt="Владимир" /></div>
 						<div class="team__cell">
-							<div class="team__name"><a href="#" title="" data-toggle="modal" data-title="Владимир" data-target="#infomodal" data-id="1.php">Владимир</a></div>
+							<div class="team__name"><a href="#" title="" data-toggle="teammodal" data-title="Владимир" data-target="#infomodal" data-id="1.php">Владимир</a></div>
 							<div class="team__appointment">Старший официант</div>
 						</div>
 					</div>
 					<div class="team__item">
 						<div class="team__pic"><img src="images/team/people-5.png" alt="Александр" /></div>
 						<div class="team__cell">
-							<div class="team__name"><a href="#" title="" data-toggle="modal" data-title="Александр" data-target="#infomodal" data-id="1.php">Александр</a></div>
+							<div class="team__name"><a href="#" title="" data-toggle="teammodal" data-title="Александр" data-target="#infomodal" data-id="1.php">Александр</a></div>
 							<div class="team__appointment">Старший официант</div>
 						</div>
 					</div>
+
+<!-- =modal infomodal -->
+<div class="infomodal" id="infomodal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<button type="button" data-dismiss="modal" class="close"></button>
+		<div class="modal__content">
+			<h2 class="title"></h2>
+			<div class="modal__text"></div>
+		</div>
+	</div>
+</div>
+<!-- =/modal infomodal -->	
+
 				</div>
 			</section>
 			<!-- =/team -->
@@ -242,6 +257,10 @@
 </footer>
 <!-- =/footer -->
 
+<!-- InstanceBeginEditable name="EditRegion5" -->
+
+
+<!-- InstanceEndEditable -->
 
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="/outdatedbrowser/outdatedbrowser.min.css" />
