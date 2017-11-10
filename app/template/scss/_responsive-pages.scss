@@ -230,17 +230,91 @@
 }
 
 
+
+@media (max-width: 767px){
+	header .logo{
+		display: none;
+	}
+	body
+	{
+		color: $color1;
+	}
+
+	.title{
+		color: $color6;
+	}
+
+	.video{
+		height: auto;
+		position: relative;
+		margin-top: 70px;
+		z-index: 1;
+		&__content{
+			position: relative;
+			width: 100%;
+		}
+		&__photo{
+			display: none;
+		}
+		&__file{
+			position: static;
+			height: auto;
+			width: 100%;
+		}
+
+		&__logo{
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 9999;
+			margin-left: -195px;
+			margin-top: -55px;
+			a{
+				display: block;
+				position: relative;
+			}
+		}
+
+		&__carousel{
+			margin-bottom: 0;
+		}
+	}
+
+	.intro{
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+
+
+	.user-access:not(checked)+label:before{
+		border-color: $color4;
+	}
+	.user-access:checked+label:before{
+		border-color: $color4;
+	}
+
+	.share{
+		color: $color8;
+	}
+}
+
+
+
+@media (max-width: 750px){
+	.footer{
+		&__menu{
+			display: none;
+		}
+	}
+}
+
+
 @media (max-width: 730px){
 	.feedback__form .row{
 		flex-flow: column;
 		input.form-control{
 			width: 100%;
-		}
-	}
-
-	.footer{
-		&__menu{
-			display: none;
 		}
 	}
 }
@@ -253,6 +327,16 @@
 	.video{
 		&__carousel{
 			margin-bottom: 4rem;
+		}
+		&__logo{
+			// margin-left: -150px;
+			margin-top: -40px;
+			img{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 80%;				
+			}
 		}
 	}
 
@@ -295,6 +379,13 @@
 		width: 49%;
 	}
 
+
+	.gallery{
+		margin-top: 0;
+		.flexbox{
+			margin-top: 0;
+		}
+	}
 }
 
 
@@ -399,6 +490,13 @@
 
 
 @media (max-width: 360px){
+	.video{
+		&__logo{
+			margin-left: -150px;
+			margin-top: -30px;
+		}
+	}
+
 	.product{
 		&__textbox{
 			margin-left: -120px;

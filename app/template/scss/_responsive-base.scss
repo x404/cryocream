@@ -70,10 +70,10 @@
 
 @media (max-width: 650px){
 	.video{
-		position: static;
-		width: auto;
-		height: auto;
-		margin-bottom: 13rem;
+		// position: static;
+		// width: auto;
+		// height: auto;
+		// margin-bottom: 13rem;
 		&__content{
 			width: 100%;
 			left: 0;
@@ -152,7 +152,8 @@
 	}
 
 	.video{
-		margin-bottom: 8rem;
+		// margin-bottom: 8rem;
+
 	}
 
 	.ya-share2 li{

@@ -1,9 +1,8 @@
-
-
 /* =mobile-menu
 ---------------------------*/
 .navbar-toggle,
-.close-menu{
+.close-menu, 
+.show-sm{
 	display: none;
 }
 /* =/mobile-menu
@@ -13,9 +12,11 @@
 
 
 @media (max-width: 840px){
-	.nav{
-
+	.show-sm{
+		display: block;
 	}
+
+
 	.navbar-toggle{
 		background-color: $color7;
 		border: none;
@@ -44,7 +45,6 @@
 		}
 	}
 
-
 	.o-menu{
 		.close-menu{
 			display: block;
@@ -55,22 +55,33 @@
 			transform: translate(-15px, 0);
 			z-index: 9999;
 		}
+		.show-sm{
+			padding-left: 1rem;
+			a{
+				display: block;
+				margin: 1.8rem;
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 
 	.close-menu{
 		@include transition;
-		display: block;
-		transform: translate(-320px, 0);	
 		background: none;
-		cursor: pointer;
-		padding: 0;
-		left: 215px;
 		background-color: $color7;
 		border: none;
+		cursor: pointer;
+		display: block;
 		height: 70px;
+		left: 215px;
+		padding: 0;
 		position: absolute;
 		text-align: center;
 		top: 0;
+		transform: translate(-320px, 0);
 		width: 70px;
 		z-index: 99;
 	}

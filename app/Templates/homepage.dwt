@@ -77,6 +77,11 @@
 				</div>
 			</li>
 		</ul>
+		
+		<div class="show-sm">
+			<a href="tel:+74958371167">+7 (495) 837-11-67</a>
+			<a href="mailto:info@cryocream.ru">info@cryocream.ru</a>
+		</div>
 	</nav>
 
 	<button type="button" class="navbar-toggle">

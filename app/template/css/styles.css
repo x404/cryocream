@@ -537,6 +537,9 @@ label.error {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
     vertical-align: top; }
 
+.video__logo {
+  display: none; }
+
 /* =/video-carousel
 ---------------------------*/
 /* =production
@@ -1340,12 +1343,15 @@ textarea {
 /* =mobile-menu
 ---------------------------*/
 .navbar-toggle,
-.close-menu {
+.close-menu,
+.show-sm {
   display: none; }
 
 /* =/mobile-menu
 ---------------------------*/
 @media (max-width: 840px) {
+  .show-sm {
+    display: block; }
   .navbar-toggle {
     background-color: #0563bf;
     border: none;
@@ -1377,21 +1383,29 @@ textarea {
     display: block;
     transform: translate(-15px, 0);
     z-index: 9999; }
+  .o-menu .show-sm {
+    padding-left: 1rem; }
+    .o-menu .show-sm a {
+      display: block;
+      margin: 1.8rem;
+      text-decoration: none; }
+      .o-menu .show-sm a:hover {
+        text-decoration: underline; }
   .close-menu {
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    display: block;
-    transform: translate(-320px, 0);
     background: none;
-    cursor: pointer;
-    padding: 0;
-    left: 215px;
     background-color: #0563bf;
     border: none;
+    cursor: pointer;
+    display: block;
     height: 70px;
+    left: 215px;
+    padding: 0;
     position: absolute;
     text-align: center;
     top: 0;
+    transform: translate(-320px, 0);
     width: 70px;
     z-index: 99; }
   #navbar {
@@ -1531,19 +1545,14 @@ textarea {
       width: 50%; } }
 
 @media (max-width: 650px) {
-  .video {
-    position: static;
-    width: auto;
-    height: auto;
-    margin-bottom: 13rem; }
-    .video__content {
-      width: 100%;
-      left: 0;
-      top: 0; }
-    .video__file, .video__photo {
-      min-width: 0;
-      min-height: 0;
-      width: 100%; } }
+  .video__content {
+    width: 100%;
+    left: 0;
+    top: 0; }
+  .video__file, .video__photo {
+    min-width: 0;
+    min-height: 0;
+    width: 100%; } }
 
 @media (max-width: 620px) {
   .footer__bottom {
@@ -1578,8 +1587,6 @@ textarea {
     header .logo img {
       max-width: 100%;
       width: 70%; }
-  .video {
-    margin-bottom: 8rem; }
   .ya-share2 li {
     margin-bottom: .5rem !important; } }
 
@@ -1692,19 +1699,72 @@ textarea {
       display: flex;
       justify-content: center; } }
 
+@media (max-width: 767px) {
+  header .logo {
+    display: none; }
+  body {
+    color: #000; }
+  .title {
+    color: #007abb; }
+  .video {
+    height: auto;
+    position: relative;
+    margin-top: 70px;
+    z-index: 1; }
+    .video__content {
+      position: relative;
+      width: 100%; }
+    .video__photo {
+      display: none; }
+    .video__file {
+      position: static;
+      height: auto;
+      width: 100%; }
+    .video__logo {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 9999;
+      margin-left: -195px;
+      margin-top: -55px; }
+      .video__logo a {
+        display: block;
+        position: relative; }
+    .video__carousel {
+      margin-bottom: 0; }
+  .intro {
+    margin-top: 5rem;
+    margin-bottom: 5rem; }
+  .user-access:not(checked) + label:before {
+    border-color: #d5d5d5; }
+  .user-access:checked + label:before {
+    border-color: #d5d5d5; }
+  .share {
+    color: #808080; } }
+
+@media (max-width: 750px) {
+  .footer__menu {
+    display: none; } }
+
 @media (max-width: 730px) {
   .feedback__form .row {
     flex-flow: column; }
     .feedback__form .row input.form-control {
-      width: 100%; }
-  .footer__menu {
-    display: none; } }
+      width: 100%; } }
 
 @media (max-width: 650px) {
   .intro {
     margin-bottom: 3rem; }
   .video__carousel {
     margin-bottom: 4rem; }
+  .video__logo {
+    margin-top: -40px; }
+    .video__logo img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; }
   .services__item .owl-nav {
     top: 58px; }
   .services__item .owl-prev {
@@ -1723,7 +1783,11 @@ textarea {
     margin: 0 auto;
     position: relative; }
   .catalog_sub .catalog__item {
-    width: 49%; } }
+    width: 49%; }
+  .gallery {
+    margin-top: 0; }
+    .gallery .flexbox {
+      margin-top: 0; } }
 
 @media (max-width: 550px) {
   .services__item .owl-nav {
@@ -1776,6 +1840,9 @@ textarea {
     margin-left: -135px; } }
 
 @media (max-width: 360px) {
+  .video__logo {
+    margin-left: -150px;
+    margin-top: -30px; }
   .product__textbox {
     margin-left: -120px; }
   .product__item {
