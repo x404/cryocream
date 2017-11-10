@@ -232,6 +232,8 @@ gulp.task('build', ['clean', 'img', 'css-libs', 'compress'], function(){
 	var buildFonts = gulp.src(config.sourceDir + '/fonts/**/*').pipe(gulp.dest('dist/template/fonts')); // Переносим шрифты в продакшен
 	var buildOutdate = gulp.src('app/outdatedbrowser/**/*').pipe(gulp.dest('dist/outdatedbrowser'));
 	var buildIMG = gulp.src('app/images/**/*').pipe(gulp.dest('dist/images'));
+	var buildIMG2 = gulp.src(config.sourceDir + '/css/*.gif').pipe(gulp.dest('dist/template/css'));
+	var buildIMG3 = gulp.src(config.sourceDir + '/css/*.png').pipe(gulp.dest('dist/template/css'));
 
 });
 

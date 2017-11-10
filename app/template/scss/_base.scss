@@ -42,6 +42,7 @@ body{
 	@include font-size(1.4);
 	@include rounded;
 	// background: url(/tmp/bg.jpg) no-repeat center top /cover;
+	color: $color2;
 	flex-flow: column;
 	font-display: swap;
 	font-family: "SegoeUIRegular", Arial;
@@ -94,7 +95,7 @@ input::-moz-focus-inner{
 
 /*** standart classes *****/
 p{margin: .5rem 0; line-height: normal;}
-a{color:$color6}
+a{color:$color2}
 h1{font-size:2.4rem; @extend .bold; text-align: center; text-transform: uppercase;}
 h2{font-size:2.2rem}
 h3{font-size:1.4rem; @extend .bold;}
@@ -173,7 +174,7 @@ input::-moz-focus-inner{
 .title{
 	@extend .bold;
 	@include font-size(2.3);
-	color: $color6;
+	color: $color2;
 	margin: 1.2rem 0;
 	text-transform: uppercase;
 }
@@ -373,7 +374,6 @@ header{
 					left: -150px;
 					min-width: 40rem;
 					text-align: left;
-					// position: relative;
 					&:before{
 						filter: FlipH;
 						left: 50%;
@@ -393,12 +393,19 @@ header{
 				}
 			}
 			&:hover{
-				& > a{
+				& > a:hover{
 					border-bottom: 1px dashed rgba(255,255,255,1);
 				}
 				.subnav:not(.subnav-text){
 					opacity: 1;
 					z-index: 99;
+				}
+			}
+
+			&.active{
+				& > a,
+				& > span{
+					border-bottom: 1px dashed rgba(255,255,255,1);
 				}
 			}
 		}
@@ -440,32 +447,6 @@ header{
 }
 
 
-
-// .owl-carousel{
-// 	.owl-controls{
-// 		position: absolute;
-// 		width: 100%;
-// 		top: 115px;
-// 		.owl-buttons{
-// 			.owl-prev,
-// 			.owl-next{
-// 				background: url(../images/prevnext.png) no-repeat left top;
-// 				width: 65px;
-// 				height: 65px;
-// 				position: absolute;
-// 			}
-// 			.owl-prev{
-// 				left: -110px;
-// 			}
-// 			.owl-next{
-// 				@include sprite;
-// 				// .rotation(180deg);
-// 				right: -110px;
-// 			}
-// 		}
-// 	}
-// }
-
 /* =main
 ---------------------------*/
 
@@ -491,6 +472,7 @@ footer{
 		font-family: "SegoeUIRegular", Arial;
 		margin-bottom: 1.5rem;
 		padding-top: 1.1rem;
+		color: $color7;
 	}	
 }
 
@@ -567,6 +549,7 @@ footer{
 
 
 	&__bottom{
+		color: $color1;
 		@extend .cg;
 		border-top: 1px solid $color4;
 		justify-content: space-between;

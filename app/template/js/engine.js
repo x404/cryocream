@@ -298,11 +298,11 @@ $(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(
 
 
 
-$(document).on('mouseover', '.mainnav li:not(.show-event)',	function(){
-	$(this).addClass('hover');
+$(document).on('mouseover', '.mainnav li:not(.show-event) a',	function(){
+	$(this).closest('li').addClass('hover');
 })
 
 
-$(document).on('mouseleave', '.mainnav li:not(.show-event)',	function(){
-	$(this).removeClass('hover');
+$(document).on('mouseleave', '.mainnav li:not(.show-event) a', function(){
+	$(this).closest('li').removeClass('hover');
 })

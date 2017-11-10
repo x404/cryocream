@@ -14,6 +14,8 @@
 /* =/intro
 ---------------------------*/
 
+
+
 /* =video-carousel
 ---------------------------*/
 .video{
@@ -57,13 +59,11 @@
 			vertical-align: top;
 		}
 	}
-
-
-
 }
-
 /* =/video-carousel
 ---------------------------*/
+
+
 
 /* =production
 ---------------------------*/
@@ -383,7 +383,7 @@
 		.email{
 			margin-left: .5rem;
 			@extend .tdn;
-			color: $color7;
+			color: $color2;
 		}
 	}
 
@@ -470,10 +470,10 @@
 ---------------------------*/
 .policy{
 	@extend .italic;
-	color: $color8;
+	// color: $color8;
 	a{
-		color: $color7;
-		@extend .tdn;
+		color: $color2;
+		@extend .tdu;
 	}
 }
 /* =/policy
@@ -501,12 +501,12 @@
   left: 0;
   width: 30px;
   height: 30px;
-  border: 1px solid $color8;
+  border: 1px solid $color2;
 }
 
 /* Меняем фон чекбокса, когда он включен. */
 .user-access:checked + label:before {
-	border-color: $color7;
+	border-color: $color2;
 }
 /* Сдвигаем переключатель чекбокса, когда он включен. */
 .user-access:checked + label:after {
