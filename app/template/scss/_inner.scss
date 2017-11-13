@@ -63,17 +63,20 @@
 			}
 			a{
 				text-decoration: none;
-				color: $color8;
+				// color: $color8;
+				color: $color2;
 				@include transition;
 				&:hover{
-					$color: $color6;
+					// $color: $color6;
+					$color: $color2;
 					color: $color;
 					border-bottom: 1px dashed $color;					
 				}
 			}
 			.active{
 				a, span{
-					$color: $color6;
+					// $color: $color6;
+					$color: $color2;
 					color: $color;
 					border-bottom: 1px dashed $color;
 				}
