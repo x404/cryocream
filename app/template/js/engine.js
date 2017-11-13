@@ -183,13 +183,17 @@ $(document).ready(function(){
 	});	
 
 
+	var thankTxt = '<div class="thank text-center"><p>Спасибо! Ваше сообщение успешно отправлено</p></div>',
+		errorTxt = 'Возникла ошибка';
+
 	// validation
 	$('#feedback-form').validate({
 		submitHandler: function(form){
 			var strSubmit=$(form).serialize();
 			$.ajax({type: "POST",url: $(form).attr('action'),data: strSubmit,
 				success: function(){
-					$('#feedback-form').html(thankcallback);
+					$('.feedback__form').append(thankTxt);
+					$('.feedback__form fieldset').hide();
 					startClock('feedback-form');
 				}
 			}).fail(function(error){alert(errorTxt)});

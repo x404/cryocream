@@ -122,3 +122,15 @@
 		}
 	}
 }
+
+
+form{
+	.thank{
+		@include font-size(1.6);
+		background-color: $color2;
+		border: 1px solid $color4;
+		color: $color3;
+		margin-bottom: 3rem;
+		padding: 2rem 0;
+	}
+}
