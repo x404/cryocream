@@ -98,9 +98,9 @@ input::-moz-focus-inner{
 /*** standart classes *****/
 p{margin: .5rem 0; line-height: normal;}
 a{color:$color2}
-h1{font-size:2.4rem; @extend .bold; text-align: center; text-transform: uppercase;}
+h1{font-size:2.4rem; @extend .bold; text-align: center; text-transform: uppercase; font-weight: normal;}
 h2{font-size:2.2rem}
-h3{font-size:1.4rem; @extend .bold;}
+h3{font-size:1.4rem; @extend .bold; font-weight: normal;}
 
 
 *:focus{outline:none}

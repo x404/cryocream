@@ -10,6 +10,7 @@ _::-webkit-:host:not(:root:root), .header{
 
 // edge
 @supports (-ms-ime-align:auto) {
+
 }
 
 
@@ -19,6 +20,9 @@ _::-webkit-:host:not(:root:root), .header{
 		display: block;
 		height: auto;
 	}
+	.team__item{
+		padding-right: 0;
+	}
 }
 
 
@@ -26,5 +30,8 @@ _::-webkit-:host:not(:root:root), .header{
 	.production__item-title{
 		display: block;
 		padding-top: 7.5rem;
+	}
+	.team__item{
+		padding-right: 0;
 	}
 }

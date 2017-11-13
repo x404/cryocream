@@ -139,13 +139,15 @@ a {
 h1 {
   font-size: 2.4rem;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: normal; }
 
 h2 {
   font-size: 2.2rem; }
 
 h3 {
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  font-weight: normal; }
 
 *:focus {
   outline: none; }
@@ -687,6 +689,9 @@ label.error {
 .events__textbox {
   position: absolute;
   top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   z-index: 2;
   height: 100%; }
   .product__textbox .flexbox,
@@ -865,6 +870,8 @@ label.error {
 ---------------------------*/
 .map {
   margin-top: 2.5rem; }
+  .map #ymap {
+    height: 500px; }
 
 /* =policy
 ---------------------------*/
@@ -1537,11 +1544,16 @@ form .thank {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   body {
     display: block;
-    height: auto; } }
+    height: auto; }
+  .team__item {
+    padding-right: 0; } }
 
 .ie10 .production__item-title {
   display: block;
   padding-top: 7.5rem; }
+
+.ie10 .team__item {
+  padding-right: 0; }
 
 @media (max-width: 1260px) {
   header .logo {
