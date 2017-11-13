@@ -2,11 +2,15 @@
 	.map{
 		margin-top: 7.7rem;
 		margin-bottom: 3rem;
+		#ymap{
+			height: 500px;
+		}
 	}
 
 	.contacts{
 		h1{
-			color: $color6;
+			// color: $color6;
+			// color: $color2;
 		}
 	}
 
@@ -40,7 +44,8 @@
 
 	.worktime{
 		border-top: 1px solid $color4;
-		color: $color9;
+		// color: $color9;
+		// color: $color2;
 		margin: 2.2rem auto 3.7rem;
 		text-align: center;
 		width: 450px;
@@ -48,7 +53,8 @@
 		h2{
 			@include font-size(2.4);
 			@extend .bold;
-			color: $color7;
+			// color: $color7;
+			// color: $color2;
 			padding-top: 4rem;
 			margin-bottom: 1.4rem;
 			text-transform: uppercase;

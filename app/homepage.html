@@ -361,9 +361,7 @@
 	<!-- =map -->
 	<section class="map">
 		<header class="title text-center">ГДЕ МЫ НАХОДИМСЯ</header>
-		<div id="map">
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5a6bb2e9a8d699903702caa5098922b35ca8e1ea11c6eab562d54292dcd4b735&amp;width=100%25&amp;height=400&amp;lang=ru_UA&amp;scroll=true"></script>			
-		</div>
+		<div id="ymap"></div>
 	</section>
 	<!-- =/map -->
 
@@ -469,6 +467,41 @@
 </footer>
 <!-- =/footer -->
 
+<script src="https://api-maps.yandex.ru/2.1.26/?lang=ru_UA"></script>
+
+<script>
+var map;
+var myCollection;	
+ymaps.ready(function () {
+	map = new ymaps.Map('ymap', {
+		center: [59.927498, 30.339108],
+		zoom: 17
+	});
+
+	myCollection = new ymaps.GeoObjectCollection(null, {
+		preset: 'islands#redDotIcon'
+	});
+	myCollection.add(new ymaps.Placemark(
+		[59.927498, 30.339108],
+		{
+			hintContent: 'Cryocream',
+			balloonContent: ''
+		}
+	));
+
+	map.behaviors.disable('scrollZoom'); 
+
+	map.geoObjects.add(myCollection);
+
+	map.events.add('click', function onMapClick(e) {
+		if(map.behaviors.isEnabled('scrollZoom')) {
+			map.events.remove('click', onMapClick);
+		} else {
+			map.behaviors.enable(['scrollZoom']);
+		}
+	});
+})
+</script>
 
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="/outdatedbrowser/outdatedbrowser.min.css" />

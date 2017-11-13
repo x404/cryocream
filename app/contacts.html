@@ -35,6 +35,17 @@
 <div class="outerwrapper inner">
 
 <!-- InstanceBeginEditable name="video" -->
+	<!-- =video -->
+	<figure class="video">
+		<div class="video__content">
+			<img class="video__photo" src="/template/images/video-bg.jpg" />
+			<video class="video__file" id="video" src="https://player.vimeo.com/external/214660084.hd.mp4?s=9a4622f6a60680805c55987fafc200c6ca5433e3&amp;profile_id=174" preload="none" loop></video>
+		</div>
+		<div class="video__logo">
+			<a href="/" title=""><img src="/template/images/logo.png" alt="CryoCream" /></a>
+		</div>
+	</figure>
+	<!-- =/video -->
 <!-- InstanceEndEditable -->
  
 	<!-- =nav -->
@@ -96,9 +107,7 @@
 	<div class="main contacts">
 		<!-- =map -->
 		<section class="map">
-			<div id="map">
-	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5a6bb2e9a8d699903702caa5098922b35ca8e1ea11c6eab562d54292dcd4b735&amp;width=100%25&amp;height=500&amp;lang=ru_UA&amp;scroll=true"></script>			
-			</div>
+			<div id="ymap"></div>
 		</section>
 		<!-- =/map -->		
 		<div class="container">
@@ -109,7 +118,7 @@
 				
 				<table cellspacing="0" cellpadding="0" border="0" class="table-noborder">
 					<tr>
-						<td><Адрес:/td>
+						<td>Адрес:</td>
 						<td>191002 Россия, Санкт-Петербург, ул. Ломоносова, д.9</td>
 					</tr>
 					<tr>
@@ -230,6 +239,41 @@
 <!-- =/footer -->
 
 <!-- InstanceBeginEditable name="EditRegion5" -->
+<script src="https://api-maps.yandex.ru/2.1.26/?lang=ru_UA"></script>
+
+<script>
+var map;
+var myCollection;	
+ymaps.ready(function () {
+	map = new ymaps.Map('ymap', {
+		center: [59.927498, 30.339108],
+		zoom: 17
+	});
+
+	myCollection = new ymaps.GeoObjectCollection(null, {
+		preset: 'islands#redDotIcon'
+	});
+	myCollection.add(new ymaps.Placemark(
+		[59.927498, 30.339108],
+		{
+			hintContent: 'Cryocream',
+			balloonContent: ''
+		}
+	));
+
+	map.behaviors.disable('scrollZoom'); 
+
+	map.geoObjects.add(myCollection);
+
+	map.events.add('click', function onMapClick(e) {
+		if(map.behaviors.isEnabled('scrollZoom')) {
+			map.events.remove('click', onMapClick);
+		} else {
+			map.behaviors.enable(['scrollZoom']);
+		}
+	});
+})
+</script>
 <!-- InstanceEndEditable -->
 
 <div id="outdated"></div>
