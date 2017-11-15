@@ -103,8 +103,6 @@ h2{font-size:2.2rem}
 h3{font-size:1.4rem; @extend .bold; font-weight: normal;}
 
 
-*:focus{outline:none}
-
 input::-moz-focus-inner{
 	border: 0;
 	padding: 0;
@@ -540,6 +538,9 @@ footer{
 			&:hover{
 				text-decoration: none;
 			}
+		}
+		a{
+			color: $color9;
 		}
 	}
 

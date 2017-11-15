@@ -389,6 +389,14 @@
 			}
 		}
 	}
+
+	.feedback .vcard a{
+		color: $color1;
+	}
+
+	.feedback .vcard .email{
+		color: $color6;
+	}
 }
 
 
@@ -522,6 +530,17 @@
 			.modal__text{
 				text-align: justify;
 			}
+		}
+	}
+
+	.feedback__form .row{
+		display: block;
+		margin-bottom: 0;
+		.form-control{
+			width: 100% !important;
+		}
+		textarea{
+			// margin-top: 0;
 		}
 	}
 }
