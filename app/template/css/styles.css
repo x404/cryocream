@@ -287,10 +287,10 @@ header .logo {
 /* =navigation
 ---------------------------*/
 .nav {
-  margin: 1.6rem 1.8rem 0;
+  margin: 1rem 1.8rem 0;
   padding: 1.2rem 0;
   background: rgba(0, 0, 0, 0.75);
-  outline: 6px solid rgba(255, 255, 255, 0.31);
+  border: 6px solid rgba(255, 255, 255, 0.31);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.75); }
   .nav > ul {

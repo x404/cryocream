@@ -14,6 +14,7 @@
 <title>Главная</title>
 <!-- TemplateEndEditable -->
 <link rel="stylesheet" href="/template/css/styles.min.css" />
+<script src="/template/js/jquery.min.js"></script>
 
 <!--[if !IE]><!-->
 <script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script>
@@ -38,7 +39,7 @@
 	<!-- =video -->
 	<figure class="video">
 		<div class="video__content">
-			<img class="video__photo" src="http://amazon.chulakov.ru/dontabak/home/1.jpg">
+			<img class="video__photo" src="/template/images/video-bg.jpg" />
 			<video class="video__file" id="video" src="https://player.vimeo.com/external/214660084.hd.mp4?s=9a4622f6a60680805c55987fafc200c6ca5433e3&amp;profile_id=174" preload="none" loop></video>
 		</div>
 		<div class="video__logo">

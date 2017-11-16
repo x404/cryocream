@@ -144,6 +144,8 @@ $(document).ready(function(){
 	});
 
 
+
+
 	// policy
 	$('.policy input').click(function(){
 		var $this = $(this),

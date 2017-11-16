@@ -55,7 +55,7 @@ gulp.task('browser-sync', function(){
 gulp.task('compress', function(){
 	pump([
 			gulp.src([  // Берем все необходимые библиотеки
-				config.libsDir + '/jquery/dist/jquery.js',
+				// config.libsDir + '/jquery/dist/jquery.js',
 				config.libsDir + '/fancybox/dist/jquery.fancybox.min.js',
 				config.sourceDir + '/js/util.js',
 				config.sourceDir + '/js/modal.js',
@@ -73,10 +73,14 @@ gulp.task('clean', function() {
 	return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
 
+gulp.task('movejs', function () {	
+	gulp.src(config.libsDir + '/jquery/dist/jquery.min.js').pipe(gulp.dest('app/template/js'));	
+});
+
 
 // отслеживаем изменения
 // в квадратных скобках перечисляются таски, которые должны выполниться до watcher (до запуска сервера)
-gulp.task('watcher', ['browser-sync', 'css-libs', 'compress'], function(){
+gulp.task('watcher', ['browser-sync', 'movejs', 'css-libs', 'compress'], function(){
 	return gulp.watch('app/template/scss/**/*.scss', ['scss', 'css-libs']), // при изменении любого *scss-файла вызываем таск scss
 		gulp.watch('app/*.html', browserSync.reload),
 		gulp.watch('app/template/js/**/*.js', browserSync.reload)

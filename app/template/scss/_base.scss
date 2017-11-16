@@ -300,10 +300,10 @@ header{
 ---------------------------*/
 .nav{
 	@extend .cg;
-	margin: 1.6rem 1.8rem 0;
+	margin: 1rem 1.8rem 0;
 	padding: 1.2rem 0;
 	background: rgba(0, 0, 0, .75);
-	outline: 6px solid rgba(255, 255, 255, .31);
+	border: 6px solid rgba(255, 255, 255, .31);
 	@include drop-shadow(0,0,4px,.75);
 	&>ul{
 		display: flex;
