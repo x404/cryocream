@@ -213,9 +213,10 @@
 	}
 
 	&__textbox{
-		$wtb: 290px;
-		left: ($w - $wtb)/2;		
-		width: $wtb;
+		// $wtb: 290px;
+		// left: ($w - $wtb)/2;		
+		// width: $wtb;
+		width: 100%;
 	}
 }
 

@@ -645,8 +645,7 @@ label.error {
   width: 333px; }
 
 .product__textbox {
-  left: 21.5px;
-  width: 290px; }
+  width: 100%; }
 
 .product__item,
 .events__item {
@@ -1469,6 +1468,7 @@ form .thank {
     margin-left: 0;
     margin-top: 0;
     outline: none;
+    border: none;
     padding-top: 0;
     position: absolute;
     top: 0;
@@ -1683,10 +1683,11 @@ form .thank {
     right: -50px; } }
 
 @media (max-width: 1199px) {
-  .inner .gallery__item {
+  .gallery__item {
     flex-basis: 19%;
-    margin-right: 1%; }
-    .inner .gallery__item:last-child {
+    margin-right: 1%;
+    margin-bottom: 1rem; }
+    .gallery__item:last-child {
       margin-right: 0; }
   .inner .events__item a {
     width: 95%; }
@@ -1919,7 +1920,11 @@ form .thank {
     display: block;
     margin-bottom: 0; }
     .feedback__form .row .form-control {
-      width: 100% !important; } }
+      width: 100% !important; }
+  .product .owl-nav {
+    top: 130px; }
+  .map #ymap {
+    height: 400px; } }
 
 @media (max-width: 550px) {
   .services__item .owl-nav {
@@ -1972,23 +1977,27 @@ form .thank {
 @media (max-width: 460px) {
   .product__item, .product__textbox {
     left: 0;
-    width: 240px; }
+    width: auto; }
   .product__textbox {
-    left: 50%;
-    margin-left: -120px;
-    padding-left: 5px;
-    padding-right: 5px; } }
+    left: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0; }
+  .map #ymap {
+    height: 300px; } }
 
 @media (max-width: 450px) {
-  .intro {
+  .inner {
     margin-top: 5.5rem; }
-  .inner .gallery__item {
-    flex-basis: 100%;
-    margin-right: 0; } }
+    .inner .gallery__item {
+      flex-basis: 100%;
+      margin-right: 0; } }
+
+@media (max-width: 420px) {
+  #foo2 .product__item a {
+    width: 95%; } }
 
 @media (max-width: 400px) {
-  .product__textbox {
-    margin-left: -135px; }
   .inner .events__item {
     margin: 1rem 0; }
     .inner .events__item a {
@@ -2000,14 +2009,10 @@ form .thank {
   .video__logo {
     margin-left: -150px;
     margin-top: -30px; }
-  .product__textbox {
-    margin-left: -120px; }
-  .product__item {
-    width: 250px; }
-  #foo2 .product__item a {
-    width: 250px; }
   .inner .main .youtube {
-    max-height: 220px; } }
+    max-height: 220px; }
+  .map #ymap {
+    height: 250px; } }
 
 @media (max-width: 320px) {
   .product__textbox {

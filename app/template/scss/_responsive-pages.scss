@@ -84,22 +84,17 @@
 
 
 @media (max-width: 1199px){
-	.inner .gallery{
+	.gallery{
 		&__item{
 			flex-basis: 19%;
 			margin-right: 1%;
+			margin-bottom: 1rem;
 			&:last-child{
 				margin-right: 0;
 			}
 		}
 	}
-
 	.inner{
-		.gallery{
-			&__item{
-				// margin-right: 0;
-			}
-		}
 		.events__item{
 			a{
 				width: 95%;
@@ -492,15 +487,12 @@
 		width: 49%;
 	}
 
-
 	.gallery{
 		margin-top: 0;
 		.flexbox{
 			margin-top: 0;
 		}
 	}
-
-
 
 	.team{
 		&__item{
@@ -539,9 +531,14 @@
 		.form-control{
 			width: 100% !important;
 		}
-		textarea{
-			// margin-top: 0;
-		}
+	}
+
+	.product .owl-nav{
+		top: 130px;
+	}
+
+	.map #ymap{
+		height: 400px;
 	}
 }
 
@@ -647,26 +644,28 @@
 @media (max-width: 460px){
 	.product{
 		$w: 240px;
+		$w: auto;
 		&__item,
 		&__textbox{
 			left: 0;
 			width: $w;
 		}
 		&__textbox{
-			left: 50%;
-			margin-left: -120px;
-			padding-left: 5px;
-			padding-right: 5px;
+			left: 0;
+			margin-left: 0;
+			padding-left: 0;
+			padding-right: 0;
 		}
+	}
+
+	.map #ymap{
+		height: 300px;
 	}
 }
 
 @media (max-width: 450px){
-	.intro{
-		margin-top: 5.5rem;
-	}
-
 	.inner{
+		margin-top: 5.5rem;
 		.gallery{
 			&__item{
 				flex-basis: 100%;
@@ -677,10 +676,16 @@
 }
 
 
+@media (max-width: 420px){
+	#foo2 .product__item a{
+		width: 95%;
+	}
+}
+
 @media (max-width: 400px){
 	.product{
 		&__textbox{
-			margin-left: -135px;
+			// margin-left: -135px;
 		}
 	}
 
@@ -706,20 +711,12 @@
 		}
 	}
 
-	.product{
-		&__textbox{
-			margin-left: -120px;
-		}
-		&__item{
-			width: 250px;
-		}
-	}
-	#foo2 .product__item a{
-		width: 250px;
-	}
-
 	.inner .main .youtube{
 		max-height: 220px;
+	}
+
+	.map #ymap{
+		height: 250px;
 	}
 }
 

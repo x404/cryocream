@@ -118,7 +118,7 @@ $(document).ready(function(){
 			},			
 			415:{
 				items:1,
-				stagePadding: 40
+				stagePadding: 20
 			},
 			525:{
 				items:1,

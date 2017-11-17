@@ -175,6 +175,41 @@
 </footer>
 <!-- =/footer -->
 
+<script src="https://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
+
+<script>
+var map;
+var myCollection;	
+ymaps.ready(function () {
+	map = new ymaps.Map('ymap', {
+		center: [59.927498, 30.339108],
+		zoom: 17
+	});
+
+	myCollection = new ymaps.GeoObjectCollection(null, {
+		preset: 'islands#redDotIcon'
+	});
+	myCollection.add(new ymaps.Placemark(
+		[59.927498, 30.339108],
+		{
+			hintContent: 'Cryocream',
+			balloonContent: ''
+		}
+	));
+
+	map.behaviors.disable('scrollZoom'); 
+
+	map.geoObjects.add(myCollection);
+
+	map.events.add('click', function onMapClick(e) {
+		if(map.behaviors.isEnabled('scrollZoom')) {
+			map.events.remove('click', onMapClick);
+		} else {
+			map.behaviors.enable(['scrollZoom']);
+		}
+	});
+})
+</script>
 
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="/outdatedbrowser/outdatedbrowser.min.css" />
